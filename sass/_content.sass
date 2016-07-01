@@ -1,0 +1,122 @@
+// Basic styles
+$body-bg: #ededed
+$content-font-color: #212121
+$page-title-color: #bb9600
+$background-image: url(../images/body-bg.jpg)
+// $body-font-family: 'Merriweather', Helvetica, serif
+$body-font-family: 'PT Sans', sans-serif
+//$body-font-family: 'Roboto', sans-serif
+
+// Basec Styles
+html
+	height: 100%
+	-webkit-font-smoothing: antialiased
+body
+	font-family: $body-font-family
+	font-size: 18px
+	line-height: 1.5
+	color: $content-font-color
+	background: $body-bg
+	overflow-x: hidden
+ul,
+ol
+	list-style: none
+img
+	display: block
+	margin: 20px auto
+	max-width: 100%
+a
+	text-decoration: none
+	color: $content-font-color
+	transition: all .3s
+	&:hover
+		text-decoration: none
+h1
+	font-size: 36px
+h2
+	font-size: 28px
+h4,
+h5
+	font-size: 18px
+	font-weight: 700
+pre
+	background: #f8f7f7
+	color: #333
+	border: 1px solid #e9e8e8
+	border-radius: 3px
+	word-wrap: break-word
+	padding: 6px 10px
+	line-height: 27px
+	overflow: hidden
+	max-height: 170px
+	code
+		border: 0
+		padding: 0
+		margin: 0
+		border-radius: 0
+dd
+	margin-left: 40px
+
+// Main Content
+.page-title
+	text-transform: uppercase
+	color: $page-title-color
+	font-weight: 700
+.content-article
+	padding: 20px
+	background: #fff
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.05)
+	// box-shadow: 3px 0px 17px 0px rgba(0, 0, 0, 0.15)
+	margin-bottom: 30px
+.article-title
+	margin-bottom: 20px
+	padding-top: 20px
+	padding-bottom: 5px
+	border-bottom: 1px solid #ccc
+	color: #000
+	margin-top: 0
+.article-list
+	list-style: circle
+	font-style: italic
+.numeric-list
+	padding-left: 20px
+	list-style: decimal
+	counter-reset: my-counter
+	li
+		counter-increment: my-counter
+		margin-bottom: 20px
+.tag
+	font-weight: 700
+
+// Tables
+.table
+	border: 1px solid #ddd
+	td
+		vertical-align: middle!important
+		max-width: 280px
+		font-family: inherit
+		&:not(:last-child)
+			border-right: 1px solid #ddd
+	thead th
+		background: #e2e2e2
+
+// Code examples
+.gist
+	margin-top: 10px
+
+iframe #wrapper .result .container .item
+	color: red
+
+.demo-container
+	margin-bottom: 20px
+	padding: 20px
+	background: #fff
+.code
+	display: none
+	// display: block
+	// visibility: hidden
+	// height: 0;
+	// transition: height .3s;
+	// &.opened
+	// 	height: 100%
+	// 	visibility: visible
