@@ -245,7 +245,7 @@ iframe #wrapper .result .container .item {
 .moto-widget-image {
   width: 300px;
   height: 300px;
-  margin: auto;
+  margin: 56px auto 0;
 }
 .moto-widget-image .moto-widget-image-link:before {
   opacity: 0;
