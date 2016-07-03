@@ -3,9 +3,7 @@ $body-bg: #ededed
 $content-font-color: #212121
 $page-title-color: #bb9600
 $background-image: url(../images/body-bg.jpg)
-// $body-font-family: 'Merriweather', Helvetica, serif
 $body-font-family: 'PT Sans', sans-serif
-//$body-font-family: 'Roboto', sans-serif
 
 // Basec Styles
 html
@@ -39,23 +37,28 @@ h4,
 h5
 	font-size: 18px
 	font-weight: 700
-pre
-	background: #f8f7f7
-	color: #333
-	border: 1px solid #e9e8e8
-	border-radius: 3px
-	word-wrap: break-word
-	padding: 6px 10px
-	line-height: 27px
-	overflow: hidden
-	max-height: 170px
-	code
-		border: 0
-		padding: 0
-		margin: 0
-		border-radius: 0
-dd
-	margin-left: 40px
+
+.article-entry
+	pre
+		background: #f8f7f7
+		color: #333
+		border: 1px solid #e9e8e8
+		border-radius: 3px
+		word-wrap: break-word
+		padding: 6px 10px
+		line-height: 27px
+		overflow: hidden
+		max-height: 170px
+		code
+			border: 0
+			padding: 0
+			margin: 0
+			border-radius: 0
+	dd
+		margin-left: 40px
+
+.gist-it-gist .gist-file
+	font-size: 14px
 
 // Main Content
 .page-title
@@ -66,7 +69,6 @@ dd
 	padding: 20px
 	background: #fff
 	box-shadow: 0 0 0 1px rgba(0,0,0,0.05)
-	// box-shadow: 3px 0px 17px 0px rgba(0, 0, 0, 0.15)
 	margin-bottom: 30px
 .article-title
 	margin-bottom: 20px
@@ -111,12 +113,25 @@ iframe #wrapper .result .container .item
 	margin-bottom: 20px
 	padding: 20px
 	background: #fff
-.code
-	display: none
-	// display: block
-	// visibility: hidden
-	// height: 0;
-	// transition: height .3s;
-	// &.opened
-	// 	height: 100%
-	// 	visibility: visible
+	.demo-item
+		padding-bottom: 50px
+		border-bottom: 1px solid rgba(0,0,0,0.5)
+
+// Tabs
+.tabs
+	.tabs-caption	
+		padding-left: 0
+	.tabs-nav-item 
+		display: inline-block
+		padding: 5px
+		margin-right: 10px
+		cursor: pointer
+		transition: all .3s
+		&:hover,
+		&.active
+			color: #ff7200
+			
+	.tabs-content
+		display: none
+		&.active
+			display: block

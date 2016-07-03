@@ -1,3 +1,5 @@
+$menu-item-color-hover: #ff7200
+
 // Header
 .header
     // margin-bottom: 50px
@@ -6,6 +8,23 @@
     display: block
     margin: 20px 0
     text-align: center
+// MAin Navigation
+.main-nav
+    font-size: 18px
+    font-weight: 500
+    padding-left: 0
+    margin: 15px 0
+    .main-nav-item
+        display: inline-block
+        margin-right: 20px
+        &:hover .main-nav-item-link,
+        &.current .main-nav-item-link
+            color: $menu-item-color-hover
+    .main-nav-item-link
+        padding: 20px 0
+        display: block
+        transition: all .3s
+
 .header-banner
     background: url("../images/header-bg.jpg") no-repeat center
     background-size: cover
@@ -17,18 +36,4 @@
         text-transform: uppercase
         color: #fff
 
-.header-nav
-    padding: 0
-    &-item
-        padding: 20px 0
-        display: block
-        font-size: 36px
-        text-align: center
-        text-transform: uppercase
-.row.header-nav
-    margin-left: 0
-    margin-right: 0
-    [class^="col-"]
-        padding-left: 0
-        padding-right: 0
 

@@ -4,6 +4,29 @@
   text-align: center;
 }
 
+.main-nav {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.main-nav .main-nav-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.main-nav .main-nav-item:hover .main-nav-item-link,
+.main-nav .main-nav-item.current .main-nav-item-link {
+  color: #ff7200;
+}
+
+.main-nav .main-nav-item-link {
+  padding: 20px 0;
+  display: block;
+  transition: all .3s;
+}
+
 .header-banner {
   background: url("../images/header-bg.jpg") no-repeat center;
   background-size: cover;
@@ -16,28 +39,6 @@
   font-size: 72px;
   text-transform: uppercase;
   color: #fff;
-}
-
-.header-nav {
-  padding: 0;
-}
-
-.header-nav-item {
-  padding: 20px 0;
-  display: block;
-  font-size: 36px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.row.header-nav {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.row.header-nav [class^="col-"] {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 html {
@@ -89,7 +90,7 @@ h5 {
   font-weight: 700;
 }
 
-pre {
+.article-entry pre {
   background: #f8f7f7;
   color: #333;
   border: 1px solid #e9e8e8;
@@ -101,15 +102,19 @@ pre {
   max-height: 170px;
 }
 
-pre code {
+.article-entry pre code {
   border: 0;
   padding: 0;
   margin: 0;
   border-radius: 0;
 }
 
-dd {
+.article-entry dd {
   margin-left: 40px;
+}
+
+.gist-it-gist .gist-file {
+  font-size: 14px;
 }
 
 .page-title {
@@ -186,8 +191,33 @@ iframe #wrapper .result .container .item {
   background: #fff;
 }
 
-.code {
+.demo-container .demo-item {
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.tabs .tabs-caption {
+  padding-left: 0;
+}
+
+.tabs .tabs-nav-item {
+  display: inline-block;
+  padding: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.tabs .tabs-nav-item:hover, .tabs .tabs-nav-item.active {
+  color: #ff7200;
+}
+
+.tabs .tabs-content {
   display: none;
+}
+
+.tabs .tabs-content.active {
+  display: block;
 }
 
 .sidebar {
@@ -213,7 +243,7 @@ iframe #wrapper .result .container .item {
 }
 
 .sidebar-nav_menu a.active {
-  color: #ffc600;
+  color: #ff7200;
 }
 
 .sidebar-nav_menu a.active::before {
@@ -222,11 +252,11 @@ iframe #wrapper .result .container .item {
   left: -10px;
   height: 100%;
   width: 2px;
-  background: #ffc600;
+  background: #ff7200;
   content: "";
 }
 
 .sidebar-nav_menu a:hover {
-  color: #ffc600;
+  color: #ff7200;
   text-decoration: none;
 }
