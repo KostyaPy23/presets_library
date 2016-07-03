@@ -1,0 +1,38 @@
+// 4.10. Image with animated icon(border-radius: 50%)
+#moto-image-10 {
+.moto-widget-image-link {
+    overflow: hidden;
+    &:before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    &:after {
+        top: 50%;
+        left: 0;
+        right: 0;
+        width: 95px;
+        height: 95px;
+        border: 5px solid @baseColor4_3;
+        border-radius: 50%;
+        margin: 0 auto;
+        font-family: FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+        font-size: 42px;
+        line-height: 90px;
+        content: "\f067";
+        z-index: 2;
+        -webkit-transform: translateY(-50%) scale(0);
+        transform: translateY(-50%) scale(0);
+    }
+    &:hover:after {
+        -webkit-transform: translateY(-50%) scale(1);
+        transform: translateY(-50%) scale(1);
+    }
+}    
+}

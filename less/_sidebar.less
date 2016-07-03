@@ -1,31 +1,23 @@
 // Sidebar
 @active-menu-item-color: #ff7200;
 
-.sidebar {
-  position: relative;
+.sidebar { position: relative; }
+
+.sidebar-nav_menu {
   padding-top: 35px;
   padding-bottom: 25px;
   background: #fff;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
-}
-
-.affix {
-  top: 20px;
-  max-width: 390px;
-}
-
-.sidebar-nav_menu {
-  li {
-    margin-bottom: 10px;
-  }
-
+  &.affix { 
+    top: 0;
+    width: 360px; 
+  }  
+  li { margin-bottom: 10px; }
   a {
     position: relative;
     transition: all 0.3s;
-
     &.active {
       color: @active-menu-item-color;
-
       &::before {
         position: absolute;
         top: 0;
@@ -36,7 +28,6 @@
         content: "";
       }
     }
-
     &:hover {
       color: @active-menu-item-color;
       text-decoration: none;

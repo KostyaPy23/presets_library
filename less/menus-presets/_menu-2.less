@@ -1,44 +1,46 @@
 // 1.02. Menu with animated bg on hover
 #moto-menu-2 {
-    .moto-widget-menu-list {
-        > .moto-widget-menu-item {
-            &:not(:first-child) {
-                margin-left: 24px;
-                @media screen and (max-width: @const_media_tablet_max_width) {
-                    margin-left: 12px;
-                }
+.moto-widget-menu-list {
+    > .moto-widget-menu-item {
+        &:not(:first-child) {
+            margin-left: 24px;
+            @media screen and (max-width: @const_media_tablet_max_width) {
+                margin-left: 12px;
             }
-            > .moto-widget-menu-link {
-                padding: 51px 29px 50px;
-                overflow: hidden;
-                z-index: 1;
-                font-size: 15px;
-                position: relative;
-                .moto-widget-menu-link-arrow {
-                    font-size: 14px;
-                    display: inline-block;
-                    margin-left: 14px;
-                    &:before { content: "\f107"; }
-                }
-                &:after {
-                    position: absolute;
-                    left: 0;
-                    width: 100%;
-                    height: 0%;
-                    bottom: 0;
-                    background-color: @baseColor2_3;
-                    content: "";
-                    z-index: -1;
-                    -webkit-transition: all, 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-                    transition: all, 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-                }
-                &:hover:after {
-                    height: 100%;
-                    top: 0;
-                    -webkit-transition: all, 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-                    transition: all, 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-                }
+        }
+        > .moto-widget-menu-link {
+            padding: 51px 29px 50px;
+            overflow: hidden;
+            z-index: 1;
+            font-size: 15px;
+            position: relative;
+            -webkit-transition: all, 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            transition: all, 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            .moto-widget-menu-link-arrow {
+                font-size: 14px;
+                display: inline-block;
+                margin-left: 14px;
+                &:before { content: "\f107"; }
+            }
+            &:after {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                bottom: 0;
+                background-color: @baseColor2_3;
+                content: "";
+                z-index: -1;
+                -webkit-transition: all, 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                transition: all, 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            }
+            &:hover:after {
+                height: 100%;
+                top: 0;
+                -webkit-transition: all, 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+                transition: all, 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
             }
         }
     }
+}
 }

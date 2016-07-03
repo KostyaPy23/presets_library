@@ -1,0 +1,17 @@
+// 4.11. Image with border-radius 50%
+#moto-image-11 {
+.moto-widget-image-link {
+    img {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &:before {
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}    
+}

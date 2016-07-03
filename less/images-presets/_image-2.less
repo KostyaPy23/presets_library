@@ -1,0 +1,18 @@
+// 4.02. Image animated at hover
+#moto-image-2 {
+.moto-widget-image-link {
+    will-change: -webkit-transform;
+    will-change: transform;
+    &:before {
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    &:hover {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+}
+}

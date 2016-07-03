@@ -20,7 +20,21 @@
  	}
  }
 
+// Images
  .moto-widget-image {
  	width: 300px;
  	height: 300px;
+ 	margin: auto;
+ 	.moto-widget-image-link {
+ 		&:before {
+ 			opacity: 0;
+ 			background: fade(@baseColor2_3, 50%);	
+ 		}
+ 		&:after { 
+ 			opacity: 0;
+			color: @baseColor3_1;
+ 		}
+ 		&:hover:before,
+ 		&:hover:after { opacity: 1; }
+ 	}
  }
