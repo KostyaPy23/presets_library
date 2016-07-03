@@ -1,0 +1,49 @@
+// 1.08. Menu with left/right borders and animated border-top
+#moto-menu-8 {
+    .moto-widget-menu-list {
+        > .moto-widget-menu-item {
+            position: relative;
+            padding: 43px 0px;
+            @media screen and (max-width: @const_media_tablet_max_width) {
+                padding: 20px 0px;
+            }
+            > .moto-widget-menu-link-level-1 {
+                padding: 5px 58px;
+                border-right-width: 1px;
+                border-right-style: solid;
+                border-color: @baseColor5_3;
+                overflow: hidden;
+                font-size: 20px;
+                line-height: 1.2em;
+                @media screen and (max-width: @const_media_tablet_max_width) {
+                    font-size: 16px;
+                    padding: 5px 30px;
+                }
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 7px;
+                    background-color: @baseColor1_3;
+                    content: "";
+                    opacity: 0;
+                    -webkit-transform: translateY(15px);
+                    transform: translateY(15px);
+                    transition: all .35s ease;
+                }
+                &:hover,
+                &.moto-widget-menu-link-active {
+                    &:after {
+                        opacity: 1;
+                        -webkit-transform: translateY(0);
+                        transform: translateY(0);
+                    }
+                }
+            }
+            &:last-child {
+                .moto-widget-menu-link { border-right: none; }
+            }
+        }
+    }
+}

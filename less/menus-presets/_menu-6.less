@@ -1,0 +1,50 @@
+// 1.06. Menu with animated background(right from left)
+#moto-menu-6 {
+    .moto-widget-menu-list {
+        > .moto-widget-menu-item {
+            margin-right: 4px;
+            &:last-child {
+                border-right: none;
+                margin-right: 0;
+            }
+            > .moto-widget-menu-link-level-1 {
+                padding: 59px 28px 67px;
+                font-size: 14px;
+                line-height: 1.2;
+                @media screen and (max-width: @const_media_tablet_max_width) {
+                    padding: 52px 10px 56px;
+                    font-size: 11px;
+                }
+                &:after {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background-color: @baseColor1_3;
+                    z-index: -1;
+                    content: "";
+                    transition: all .3s ease;
+                }
+
+                > .moto-widget-menu-link-arrow {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 50px;
+                    font-size: 17px;
+                    text-align: center;
+                    @media screen and (max-width: @const_media_tablet_max_width) {
+                        bottom: 40px;
+                    }
+                    &:before { content: "\f0d7"; }
+                }
+                &:hover,
+                &.moto-widget-menu-link-active {
+                    &:after { width: 100%; }
+                }
+            }
+        }
+    }    
+}

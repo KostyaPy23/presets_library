@@ -1,0 +1,70 @@
+// 1.12. Menu looks like mobile menu at desktop
+#moto-menu-12 {
+    &.moto-widget-menu-mobile-open {
+        display: inline-block;
+        .moto-widget-menu-list {
+            display: block;
+            width: 207px;
+            position: absolute;
+            z-index: 9;
+            margin-top: 10px;
+            padding: 25px 0;
+            border: none;
+            &:before {
+                position: absolute;
+                top: -4px;
+                left: 35px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 4px 4px 4px;
+                border-color: transparent transparent @baseColor1_3 transparent;
+                content: "";
+            }
+
+            .moto-widget-menu-item {
+                display: block;
+                .moto-widget-menu-link {
+                    text-align: left;
+                    padding: 4px 25px;
+                    font-size: 20px;
+                    &.moto-widget-menu-link-submenu:before {
+                        opacity: 0;
+                        display: block;
+                        position: absolute;
+                        top: 13px;
+                        right: -4px;
+                        height: 6px;
+                        width: 6px;
+                        z-index: 9999;
+                        border-radius: 50%;
+                        background-color: @baseColor1_3;
+                        content: "";
+                        -webkit-transition: all .3s;
+                        transition: all .3s;
+                    }
+                    &.moto-widget-menu-link-submenu:hover:before { opacity: 1; }
+                    @media screen and (max-width: @const_media_mobile-h_max_width) {
+                        &.moto-widget-menu-link-submenu:before { display: none; }
+                    }
+                }
+                .moto-widget-menu-sublist {
+                    left: 100%;
+                    top: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .moto-widget-menu-toggle-btn {
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        .moto-widget-menu-toggle-btn-icon {
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+    .moto-widget-menu-list { display: none; }
+}

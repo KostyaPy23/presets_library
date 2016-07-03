@@ -1,0 +1,79 @@
+// 1.11. Submenu with css triangles
+#moto-menu-11 {
+    .moto-widget-menu-sublist {
+        top: 100%;
+        min-width: 230px;
+        padding: 10px 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        &:after {
+            position: absolute;
+            top: -26px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 26px;
+            content: "";
+        }
+        &:before {
+            position: absolute;
+            top: -14px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 14px 14px 14px;
+            border-color: transparent transparent @customColor2 transparent;
+            content: "";
+
+        }
+        .moto-widget-menu-item {
+            display: block;
+            &:not(:last-child) {
+                margin-bottom: 19px;
+            }
+            .moto-widget-menu-link {
+                font-size: 15px;
+                padding: 0px 20px;
+                text-align: center;
+                transition: all .3s;
+            }
+        }
+        /* --- third level --- */
+        .moto-widget-menu-sublist {
+            left: calc(~"100% + 10px");
+            top: -10px;
+            margin-left: 0;
+            margin-top: 0;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            &:before {
+                position: absolute;
+                left: -10px;
+                display: block;
+                margin: 0;
+                border: none;
+                top: 0;
+                width: 10px;
+                height: 100%;
+                background: transparent;
+                content: "";
+            }
+            &:after {
+                position: absolute;
+                top: 27px;
+                left: -9px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 8px 9px 8px 0;
+                border-color: transparent @customColor2 transparent transparent;
+                content: "";
+            }
+        }
+    }
+}

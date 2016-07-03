@@ -1,0 +1,21 @@
+// 1.05. Menu with simple hover
+#moto-menu-5 {
+    .moto-widget-menu-list {
+        > .moto-widget-menu-item {
+            &:not(:first-child) {
+                margin-left: 50px;
+                @media screen and (max-width: @const_media_tablet_max_width) {
+                    margin-left: 30px;
+                }
+            }
+            > .moto-widget-menu-link {
+                overflow: hidden;
+                z-index: 2;
+                font-size: 22px;
+                @media screen and (max-width: @const_media_tablet_max_width) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }  
+}
