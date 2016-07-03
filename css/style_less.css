@@ -13,6 +13,10 @@
 .moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link:hover {
   color: #fe514c;
 }
+.moto-widget-image {
+  width: 300px;
+  height: 300px;
+}
 /*
 Table Of Contents
 
