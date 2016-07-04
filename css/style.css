@@ -178,6 +178,9 @@ iframe #wrapper .result .container .item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   margin-bottom: 45px;
 }
+.demo-container .demo-item .demo-item-title {
+  font-size: 22px;
+}
 .tabs .tabs-caption {
   padding-left: 0;
   background: #eaeaea;
@@ -291,7 +294,7 @@ iframe #wrapper .result .container .item {
 }
 .moto-widget-image .moto-widget-image-link:before {
   opacity: 0;
-  background: rgba(85, 85, 85, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 .moto-widget-image .moto-widget-image-link:after {
   opacity: 0;
@@ -303,6 +306,24 @@ iframe #wrapper .result .container .item {
 }
 .moto-widget-image .moto-widget-image-picture {
   margin: 0;
+}
+.moto-widget-button-link {
+  color: #555555;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: transparent;
+  border-color: #fe514c;
+}
+.moto-widget-button-link:before {
+  color: #fe514c;
+  background: transparent;
+}
+.moto-widget-button-link:hover {
+  color: #fe514c;
+}
+.moto-widget-button-link:hover:before {
+  color: #fe514c;
 }
 /* --- general styles for menu presets --- */
 .moto-widget-menu {
@@ -1836,7 +1857,6 @@ iframe #wrapper .result .container .item {
 #moto-button-1 .moto-widget-button-link .moto-widget-theme-icon:before {
   content: "\f0da";
   margin-left: 10px;
-  -webkit-transition: all .3s;
   transition: all .3s;
 }
 #moto-button-2 .moto-widget-button-link {

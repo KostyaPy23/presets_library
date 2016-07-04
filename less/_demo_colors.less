@@ -31,7 +31,7 @@
  	.moto-widget-image-link {
  		&:before {
  			opacity: 0;
- 			background: fade(@baseColor2_3, 50%);	
+ 			background: fade(@customColor1, 50%);	
  		}
  		&:after { 
  			opacity: 0;
@@ -41,4 +41,22 @@
  		&:hover:after { opacity: 1; }
  	}
  	.moto-widget-image-picture { margin: 0; }
+ }
+
+ // Buttons
+ .moto-widget-button-link {
+ 	color: @baseColor2_3;
+ 	font-family: 'Maven Pro', sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+	background-color: transparent;
+  	border-color: #fe514c;
+  	&:before {
+  		color: @baseColor1_3;
+  		background: transparent;
+  	}
+  	&:hover {
+  		color: @baseColor1_3;
+  		&:before { color: @baseColor1_3; }
+  	}
  }
