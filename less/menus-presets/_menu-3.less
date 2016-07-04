@@ -1,68 +1,68 @@
  // 1.03. Menu with border-bottom on hover(border with triangle)
 #moto-menu-3 {
-    .moto-widget-menu-list {
-        > .moto-widget-menu-item {
-            &:not(:first-child) {
-                margin-left: 46px;
-                @media screen and (max-width: @const_media_tablet_max_width) {
-                    margin-left: 26px;
-                }
+.moto-widget-menu-list {
+    > .moto-widget-menu-item {
+        &:not(:first-child) {
+            margin-left: 46px;
+            @media screen and (max-width: @const_media_tablet_max_width) {
+                margin-left: 26px;
+            }
+        }
+        &:after {
+            position: absolute;
+            left: -23px;
+            top: 0;
+            content: "";
+            width: 1px;
+            height: 100%;
+        }
+        &:first-child {
+            &:after { content: none; }
+        }
+        @media screen and (max-width: @const_media_tablet_max_width) {
+            &:after { left: -13px; }
+        }
+        > .moto-widget-menu-link {
+            border-bottom: 10px solid;
+            font-size: 19px;
+            line-height: 19px;
+            @media screen and (max-width: @const_media_tablet_max_width) {
+                font-size: 16px;
             }
             &:after {
-                position: absolute;
-                left: -23px;
-                top: 0;
                 content: "";
-                width: 1px;
-                height: 100%;
+                position: absolute;
+                top: calc(~"100% + 10px");
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                border-style: solid;
+                border-width: 7px 6.5px 0 6.5px;
+                transition: .2s ease;
+                border-color: @baseColor1_3 transparent transparent transparent;
+                opacity: 0;
             }
-            &:first-child {
-                &:after { content: none; }
-            }
-            @media screen and (max-width: @const_media_tablet_max_width) {
-                &:after { left: -13px; }
-            }
-            > .moto-widget-menu-link {
-                border-bottom: 10px solid;
-                font-size: 19px;
-                line-height: 19px;
-                @media screen and (max-width: @const_media_tablet_max_width) {
-                    font-size: 16px;
-                }
-                &:after {
-                    content: "";
-                    position: absolute;
-                    top: calc(~"100% + 10px");
-                    left: 50%;
-                    -webkit-transform: translateX(-50%);
-                    transform: translateX(-50%);
-                    border-style: solid;
-                    border-width: 7px 6.5px 0 6.5px;
-                    transition: .2s ease;
-                    border-color: @baseColor1_3 transparent transparent transparent;
-                    opacity: 0;
-                }
-                .moto-widget-menu-link-arrow {
-                    position: absolute;
-                    left: 50%;
-                    top: 64%;
-                    font: 400 16px/16px "FontAwesome";
-                    -webkit-transform: translateX(-50%);
-                    transform: translateX(-50%);
-                    &:before {
-                        content: "\f107";
-                        -webkit-transition: .3s;
-                        transition: .3s;
-                    }
-                }
-                &.moto-widget-menu-link-active {
-                    &:after { opacity: 1; }
-                }
-                &:hover {
-                    &:after { opacity: 1; }
+            .moto-widget-menu-link-arrow {
+                position: absolute;
+                left: 50%;
+                top: 64%;
+                font: 400 16px/16px "FontAwesome";
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                &:before {
+                    content: "\f107";
+                    -webkit-transition: .3s;
+                    transition: .3s;
                 }
             }
-            .moto-widget-menu-sublist { border: 1px solid; }
+            &.moto-widget-menu-link-active {
+                &:after { opacity: 1; }
+            }
+            &:hover {
+                &:after { opacity: 1; }
+            }
         }
+        .moto-widget-menu-sublist { border: 1px solid; }
     }
+}
 }

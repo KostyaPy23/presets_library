@@ -1,26 +1,26 @@
 // 1.04. Menu with bordered each item and icon
 #moto-menu-4 {
-    .moto-widget-menu-list {
-        > .moto-widget-menu-item {
-            &:not(:first-child) {
-                margin-left: 10px;
+.moto-widget-menu-list {
+    > .moto-widget-menu-item {
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+        > .moto-widget-menu-link {
+            font-size: 16px;
+            letter-spacing: 0px;
+            z-index: 2;
+            padding: 12px 15px;
+            overflow: hidden;
+            border: 1px solid;
+            @media screen and (max-width: @const_media_tablet_max_width) {
+                font-size: 11px;
+                padding: 12px 8px;
             }
-            > .moto-widget-menu-link {
-                font-size: 16px;
-                letter-spacing: 0px;
-                z-index: 2;
-                padding: 12px 15px;
-                overflow: hidden;
-                border: 1px solid;
-                @media screen and (max-width: @const_media_tablet_max_width) {
-                    font-size: 11px;
-                    padding: 12px 8px;
-                }
-                .moto-widget-menu-link-arrow {
-                    padding-left: 7px;
-                    &:before { content: "\f0d7"; }
-                }
+            .moto-widget-menu-link-arrow {
+                padding-left: 7px;
+                &:before { content: "\f0d7"; }
             }
         }
     }
+}
 }
