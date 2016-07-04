@@ -10,7 +10,8 @@
         > .moto-widget-menu-link-level-1 {
             padding: 59px 28px 67px;
             font-size: 14px;
-            line-height: 1.2;
+            position: relative;
+            z-index: 3;
             @media screen and (max-width: @const_media_tablet_max_width) {
                 padding: 52px 10px 56px;
                 font-size: 11px;
@@ -22,7 +23,7 @@
                 left: 0;
                 width: 0;
                 height: 100%;
-                background-color: @baseColor1_3;
+                background-color: @baseColor2_3;
                 z-index: -1;
                 content: "";
                 transition: all .3s ease;

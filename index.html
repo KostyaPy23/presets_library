@@ -704,8 +704,47 @@
 								</pre>
 							</section>
 						</article>
+
 						<article class="content-article">
-							<h2 class="article-title" id="article-9">JSON файлы</h2>
+							<h2 class="article-title" id="article-9">Общие требования к написанию стилей</h2>
+							<p>
+								В новой редакции Code Style Guide для Bootstrap к коду CSS вводятся дополнительные требования к оформлению и структуре стилей.
+							</p>
+							<h4>Синтаксис</h4>
+							<ol class="numeric-list">
+								<li>Используйте два пробела для определния отступов (табов) в коде; </li>
+								<li>
+									Выполняя групировку селекторов, определяйте каждый последующий селектор с новой строки;
+									<script src="https://gist.github.com/KostyaPy23/9b17ad26eead98b1f21ff2d607f213ee.js"></script>
+								</li>
+								<li>Включайте дополнительный пробел перед определением открывающей скобки ({) для формирования CSS правил;</li>
+								<li>Определяйте закрывающие скобки (}) для формирования CSS правил с новой строки;</li>
+								<li>Включайте дополнительный пробел после определения “:” в CSS правиле;</li>
+								<li>Каждое правило в селекторе должно определяться с новой строки; </li>
+								<li>Всегда используйте “;” в конце CSS правила, даже если оно последнее в селекторе; </li>
+								<li>Сложные CSS правила (например, box-shadow) должны содержать дополнительный пробел после запятой каждого из вложенных значений;</li>
+								<li>Не указывайте единицы измерения для 0 значений. Например, 0 вместо 0px.</li>
+							</ol>
+							<h4>Порядок определения CSS правил</h4>
+							<p>CSS правила в стилях должны определяться в следующем порядке:</p>
+							<ol class="numeric-list compact">
+								<li>Позиционирование</li>
+								<li>Боксовая модель</li>
+								<li>Типография</li>
+								<li>Визуальные правила</li>
+							</ol>
+							Пример: 
+							<script src="https://gist.github.com/KostyaPy23/868dd6f3ac1fc4f86328bfda229a5cca.js"></script>
+							<h4>CSS селекторы с одним правилом</h4>
+							<p>CSS селекторы содержащие только одно правило внутри лучше всего определять в одну строку.</p>
+							<script src="https://gist.github.com/KostyaPy23/b88c531c13135a4a1f0646a3680149bd.js"></script>
+							<h4>Сокращенные CSS правила</h4>
+							<p>Используйте сокращенную форму записи CSS правил по возможности.</p>
+							<script src="https://gist.github.com/KostyaPy23/a6490605b9ca20c2ab64cf5b5879ce4a.js"></script>
+						</article>
+
+						<article class="content-article">
+							<h2 class="article-title" id="article-10">JSON файлы</h2>
 							<ol class="numeric-list">
 								<li>
 									Внимательно относиться к файлам json, расположенным в папке [settings]. Они должны быть валидными.
@@ -722,7 +761,7 @@
 							</ol>
 						</article>
 						<article class="content-article">
-							<h2 class="article-title" id="article-10">LESS</h2>
+							<h2 class="article-title" id="article-11">LESS</h2>
 							<ol class="numeric-list">
 								<li>
 									Все стили, касающиеся пресетов пишем в файл styles.less темы.
@@ -789,6 +828,86 @@
 								</li>
 							</ol>
 						</article>
+
+						<article class="content-article">
+							<h2 class="article-title" id="article-12">Presets Builder</h2>
+							<h4>Основные требования</h4>
+							<ol class="numeric-list compact">
+								<li>font-color - для всех пресетов задается через builder;</li>
+								<li>background-color - для всех пресетов задается через builder;</li>
+								<li>border-color - для всех пресетов задается через builder;</li>
+								<li>font-family - для всех пресетов задается через builder;</li>
+								<li>font-weight - для всех пресетов задается через builder;</li>
+								<li>все цвета обязательно должны быть привязаны к палитре;</li>
+								<li>все опции которые включены в файле config.json должны работать в билдере.</li>
+							</ol>
+
+							<div class="divider"></div>
+
+							<h4>Menu Presets</h4>
+							<ol class="numeric-list compact">
+								<li>Для мобильного меню, не нужно отображать стрелочки для submenu;</li>
+								<li>Для мобильного меню, нужно визуально отделять 2-й и 3-й уровни меню. Как правило через “padding-left”;</li>
+								<li>Часто в шаблонах встречаются стрелочки на пунктах меню, где есть submenu. Эти стрелочки должны иметь возможность редактироваться через builder(color, background-color);</li>
+								<li>Обязательно выделять активный пункт меню, для десктопного menu и submenu, а также для мобильного.</li>
+							</ol>
+
+							<div class="divider"></div>
+
+							<h4>Buttons Presets</h4>
+							<p> На кнопках обращать внимание на размеры кнопки и позицию иконки(если есть по дизайну). </p>
+
+							<div class="divider"></div>
+
+							<h4>Grid Gallery Presets</h4>
+							<ol class="numeric-list compact">
+								<li>Layer Color и Layer Border Color должны иметь возможность менять цвет как в обычном состоянии так и при ховере.</li>
+								<li>Цвет иконки в галерее задается стилями(возможно изменится в одному из следующих билдов).</li>
+								<li>Если по дизайну в галерее есть только иконка, то при добавлении текста в кепшин, он должен отображаться хорошо. Можно его показывать сверху или снизу иконки.</li>
+							</ol>
+
+							<div class="divider"></div>
+
+							<h4>Images Presets</h4>
+							<ol class="numeric-list compact">
+								<li>1-й пресет картинок всегда оставлять без изменений. В файле config.json нужно отключать все опции.</li>
+								<li>Layer Color и Layer Icon Color должны иметь возможность менять цвет как в обычном состоянии так и при ховере.</li>
+							</ol>
+
+							<div class="divider"></div>
+
+							<h4>Social Icons Presets</h4>
+							<ol class="numeric-list compact">
+								<li>Обращать внимание на позицию иконки. Если она вписана в фигуру, то обязательно должна отображаться по центру.</li>
+								<li>Color, background i border-color иконки задается через builder. Исключением являются иконки с кастомными цветами.</li>
+								<li>В иконки должен быть нижний отступ(margin) для нормального отображения на мобильных устройствах, когда иконки становятся одно под одну.</li>
+							</ol>
+
+							<div class="divider"></div>
+
+							<h4>Contact Forms</h4>
+							<ol class="numeric-list compact">
+								<li>border-color для полей формы и общий border-color задается через builder.</li>
+							</ol>
+
+							<div class="divider"></div>
+
+							<h4>Slider and Carousel Presets</h4>
+							<ol class="numeric-list compact">
+								<li>Arrows: color, background, border-color - задается через builder.</li>
+								<li>Pagination: color, background-color, border-color - задается через builder.</li>
+								<li>Обращать внимание на позиционирование стрелочек и пагинации.</li>
+								<li>Для нормального отображения стрелочек и пагинации на мобильных устройствах, нужно уменьшать их розмеры.</li>
+							</ol>
+
+							<div class="divider"></div>
+
+							<h4>Lists Presets</h4>
+							<ol class="numeric-list compact">
+								<li>Color, font-size, font-weight для списков задавать не нужно.</li>
+								<li>Обращать внимание на отступы сверху и снизу</li>
+							</ol>
+						</article>
 					</section>
 				</div>
 				<!-- END MAIN CONTENT -->
@@ -805,6 +924,7 @@
 				<!-- END SITEBAR -->
 			</div>
 		</div>
+		<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 	</main>
 
 	<footer>

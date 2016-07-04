@@ -1,0 +1,26 @@
+// 3.09. Button with animated layer background(from left to right)
+#moto-button-9 {
+.moto-widget-button-link {
+    border: 2px solid;
+    &:after {
+        display: block;
+        opacity: .3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: @baseColor2_3;
+        content: "";
+        z-index: -1;
+        transition: all .3s;
+    }
+    &:hover:after {
+        width: 100%;
+        opacity: 1;
+    }
+    &.moto-size-large  { padding: 25px 22px; }
+    &.moto-size-medium { padding: 23px 25px 20px; }
+    &.moto-size-small  { padding: 18px 18px; }
+}    
+}

@@ -696,467 +696,467 @@ $9. Contact Forms
 // $3. Buttons
 // -----------------------------------------------------
 
-// 3.01. Button with icon(right)
-#moto-button-1 {
-    .moto-widget-button-link {
-        .moto-widget-button-label {
-            float: left;
-        }
-        .moto-widget-theme-icon {
-            position: relative;
-            display: inline-block;
-            &:before {
-                content: "\f0da";
-                margin-left: 10px;
-                -webkit-transition: all .3s;
-                transition: all .3s;
-            }
-        }
-    }    
-}
+// // 3.01. Button with icon(right)
+// #moto-button-1 {
+//     .moto-widget-button-link {
+//         .moto-widget-button-label {
+//             float: left;
+//         }
+//         .moto-widget-theme-icon {
+//             position: relative;
+//             display: inline-block;
+//             &:before {
+//                 content: "\f0da";
+//                 margin-left: 10px;
+//                 -webkit-transition: all .3s;
+//                 transition: all .3s;
+//             }
+//         }
+//     }    
+// }
 
 
-// 3.02. Button with icon(left) and animation on hover(icon cover text)
-#moto-button-2 {
-    .moto-widget-button-link {
-        padding: 0;
-        .moto-widget-theme-icon {
-            display: block;
-            float: left;
-            margin: 0;
-            position: absolute;
-            -webkit-transition: all .35s ease;
-            transition: all .35s ease;
-            &:before {
-                position: absolute;
-                z-index: 5;
-                display: block;
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                content: "\f002";
-                -webkit-transition: all .3s ease;
-                transition: all .3s ease;
-            }
-        }
-        &.moto-size-large {
-            line-height: 57px;
-            .moto-widget-button-label { padding-left: 82px; }
-            .moto-widget-theme-icon {
-                width: 62px;
-                height: 62px;
-                font-size: 30px;
-                line-height: 62px;
-            }
-        }
-        &.moto-size-medium {
-            line-height: 51px;
-            .moto-widget-button-label {
-                padding-left: 75px;
-            }
-            .moto-widget-theme-icon {
-                width: 54px;
-                height: 54px;
-                font-size: 24px;
-                line-height: 56px;
-            }
-        }
-        &.moto-size-small {
-            line-height: 31px;
-            .moto-widget-button-label { padding-left: 54px; }
-            .moto-widget-theme-icon {
-                width: 32px;
-                height: 32px;
-                font-size: 18px;
-                line-height: 32px;
-            }
-        }
-        &:hover {
-            .moto-widget-theme-icon {
-                width: 162px;
-                position: absolute;
-                &:before { border-radius: 50px; }
-            }
-        }
-    }    
-}
+// // 3.02. Button with icon(left) and animation on hover(icon cover text)
+// #moto-button-2 {
+//     .moto-widget-button-link {
+//         padding: 0;
+//         .moto-widget-theme-icon {
+//             display: block;
+//             float: left;
+//             margin: 0;
+//             position: absolute;
+//             -webkit-transition: all .35s ease;
+//             transition: all .35s ease;
+//             &:before {
+//                 position: absolute;
+//                 z-index: 5;
+//                 display: block;
+//                 width: 100%;
+//                 height: 100%;
+//                 border-radius: 50%;
+//                 content: "\f002";
+//                 -webkit-transition: all .3s ease;
+//                 transition: all .3s ease;
+//             }
+//         }
+//         &.moto-size-large {
+//             line-height: 57px;
+//             .moto-widget-button-label { padding-left: 82px; }
+//             .moto-widget-theme-icon {
+//                 width: 62px;
+//                 height: 62px;
+//                 font-size: 30px;
+//                 line-height: 62px;
+//             }
+//         }
+//         &.moto-size-medium {
+//             line-height: 51px;
+//             .moto-widget-button-label {
+//                 padding-left: 75px;
+//             }
+//             .moto-widget-theme-icon {
+//                 width: 54px;
+//                 height: 54px;
+//                 font-size: 24px;
+//                 line-height: 56px;
+//             }
+//         }
+//         &.moto-size-small {
+//             line-height: 31px;
+//             .moto-widget-button-label { padding-left: 54px; }
+//             .moto-widget-theme-icon {
+//                 width: 32px;
+//                 height: 32px;
+//                 font-size: 18px;
+//                 line-height: 32px;
+//             }
+//         }
+//         &:hover {
+//             .moto-widget-theme-icon {
+//                 width: 162px;
+//                 position: absolute;
+//                 &:before { border-radius: 50px; }
+//             }
+//         }
+//     }    
+// }
 
 
-// 3.03. Button with border-bottom and border radius
-#moto-button-3 {
-    .moto-widget-button-link {
-        border-bottom-width: 5px;
-        border-bottom-style: solid;
-        border-radius: 5px;
-        transition: transform .0s, padding .0s, background-color .2s ease, border-color .2s ease;
-        &:active {
-            border-width: 0;
-            margin-bottom: 5px;
-            -webkit-transform: translate(0px, 5px);
-            transform: translate(0px, 5px);
-        }
-        &.moto-size-large   { padding: 14px 30px; }
-        &.moto-size-medium  { padding: 12px 25px; }
-        &.moto-size-small   { padding: 9px 20px; }
-    }    
-}
+// // 3.03. Button with border-bottom and border radius
+// #moto-button-3 {
+//     .moto-widget-button-link {
+//         border-bottom-width: 5px;
+//         border-bottom-style: solid;
+//         border-radius: 5px;
+//         transition: transform .0s, padding .0s, background-color .2s ease, border-color .2s ease;
+//         &:active {
+//             border-width: 0;
+//             margin-bottom: 5px;
+//             -webkit-transform: translate(0px, 5px);
+//             transform: translate(0px, 5px);
+//         }
+//         &.moto-size-large   { padding: 14px 30px; }
+//         &.moto-size-medium  { padding: 12px 25px; }
+//         &.moto-size-small   { padding: 9px 20px; }
+//     }    
+// }
 
 
-// 3.04. Button with border and icon(right)
-#moto-button-4 {
-    .moto-widget-button-link {
-        text-align: left;
-        border: 2px solid;
-        padding: 12px 25px;
-        .moto-widget-button-label { float: left; }
-        .moto-widget-theme-icon {
-            display: inline-block;
-            padding-left: 6px;
-            &:before {
-                content: "\f101";
-                transition: all .3s;
-            }
-        }
-    }    
-}
+// // 3.04. Button with border and icon(right)
+// #moto-button-4 {
+//     .moto-widget-button-link {
+//         text-align: left;
+//         border: 2px solid;
+//         padding: 12px 25px;
+//         .moto-widget-button-label { float: left; }
+//         .moto-widget-theme-icon {
+//             display: inline-block;
+//             padding-left: 6px;
+//             &:before {
+//                 content: "\f101";
+//                 transition: all .3s;
+//             }
+//         }
+//     }    
+// }
 
 
-// 3.05. Button with large border-radius
-#moto-button-5 {
-    .moto-widget-button-link {
-        border-radius: 20px;
-        &.moto-size-small   { padding: 18px 55px 19px 55px; }
-        &.moto-size-medium  { padding: 7px 40px 9px 40px; }
-        &.moto-size-large   { padding: 18px 55px 22px 55px; }
-    }    
-}
+// // 3.05. Button with large border-radius
+// #moto-button-5 {
+//     .moto-widget-button-link {
+//         border-radius: 20px;
+//         &.moto-size-small   { padding: 18px 55px 19px 55px; }
+//         &.moto-size-medium  { padding: 7px 40px 9px 40px; }
+//         &.moto-size-large   { padding: 18px 55px 22px 55px; }
+//     }    
+// }
 
 
-// 3.06. Round button without text
-#moto-button-6 {
-    .moto-widget-button-link {
-        width: 63px;
-        height: 63px;
-        border-radius: 50%;
-        font-size: 0;
-        .moto-widget-button-label { float: left; }
-        .moto-widget-theme-icon {
-            position: relative;
-            display: inline-block;
-            &:before {
-                font-size: 25px;
-                line-height: 63px;
-                content: "\f105";
-            }
-        }
-        &:hover {
-            -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-        }
-        &.moto-size-large {
-            width: 63px;
-            height: 63px;
-            .moto-widget-theme-icon:before { line-height: 63px; }
-        }
-        &.moto-size-medium {
-            width: 43px;
-            height: 43px;
-            .moto-widget-theme-icon:before { line-height: 43px; }
-        }
-        &.moto-size-small {
-            width: 23px;
-            height: 23px;
-            .moto-widget-theme-icon:before {
-                line-height: 23px;
-                font-size: 18px;
-            }
-        }
-    }
-}
+// // 3.06. Round button without text
+// #moto-button-6 {
+//     .moto-widget-button-link {
+//         width: 63px;
+//         height: 63px;
+//         border-radius: 50%;
+//         font-size: 0;
+//         .moto-widget-button-label { float: left; }
+//         .moto-widget-theme-icon {
+//             position: relative;
+//             display: inline-block;
+//             &:before {
+//                 font-size: 25px;
+//                 line-height: 63px;
+//                 content: "\f105";
+//             }
+//         }
+//         &:hover {
+//             -webkit-transform: rotate(-360deg);
+//             transform: rotate(-360deg);
+//         }
+//         &.moto-size-large {
+//             width: 63px;
+//             height: 63px;
+//             .moto-widget-theme-icon:before { line-height: 63px; }
+//         }
+//         &.moto-size-medium {
+//             width: 43px;
+//             height: 43px;
+//             .moto-widget-theme-icon:before { line-height: 43px; }
+//         }
+//         &.moto-size-small {
+//             width: 23px;
+//             height: 23px;
+//             .moto-widget-theme-icon:before {
+//                 line-height: 23px;
+//                 font-size: 18px;
+//             }
+//         }
+//     }
+// }
 
 
-// 3.07. Button with border-top
-#moto-button-7 {
-    .moto-widget-button-link {
-        letter-spacing: 0.7px;
-        .moto-widget-button-label { z-index: 1; }
-        &.moto-size-large   { padding: 15px 0 0 0; }
-        &.moto-size-medium  { padding: 10px 0 0 0; }
-        &.moto-size-small   { padding: 15px 0 0 0; }
-        &:after {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            margin: 0 auto;
-            height: 4px;
-            background-color: @customColor1;
-            content: "";
-            z-index: 0;
-            transition: all .2s;
-        }
-        &:hover:after { width: 0; }
-        &:active {
-            -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-        }
-    }    
-}
+// // 3.07. Button with border-top
+// #moto-button-7 {
+//     .moto-widget-button-link {
+//         letter-spacing: 0.7px;
+//         .moto-widget-button-label { z-index: 1; }
+//         &.moto-size-large   { padding: 15px 0 0 0; }
+//         &.moto-size-medium  { padding: 10px 0 0 0; }
+//         &.moto-size-small   { padding: 15px 0 0 0; }
+//         &:after {
+//             display: block;
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             right: 0;
+//             width: 100%;
+//             margin: 0 auto;
+//             height: 4px;
+//             background-color: @customColor1;
+//             content: "";
+//             z-index: 0;
+//             transition: all .2s;
+//         }
+//         &:hover:after { width: 0; }
+//         &:active {
+//             -webkit-transform: scaleX(0);
+//             transform: scaleX(0);
+//         }
+//     }    
+// }
 
 
-// 3.08. Button with scaleble layer background
-#moto-button-8 {
-   .moto-widget-button-link {
-        padding: 12px 28px;
-        &:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            background-color: @baseColor2_3;
-            opacity: 0;
-            z-index: 0;
-            content: "";
-            -webkit-transform: scale(.4);
-            transform: scale(.4);
-            transition: all .3s ease;
-        }
-        &:hover:before {
-            opacity: 1;
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-    } 
-}
+// // 3.08. Button with scaleble layer background
+// #moto-button-8 {
+//    .moto-widget-button-link {
+//         padding: 12px 28px;
+//         &:before {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             right: 0;
+//             bottom: 0;
+//             width: 100%;
+//             height: 100%;
+//             background-color: @baseColor2_3;
+//             opacity: 0;
+//             z-index: 0;
+//             content: "";
+//             -webkit-transform: scale(.4);
+//             transform: scale(.4);
+//             transition: all .3s ease;
+//         }
+//         &:hover:before {
+//             opacity: 1;
+//             -webkit-transform: scale(1);
+//             transform: scale(1);
+//         }
+//     } 
+// }
 
 
-// 3.09. Button with animated layer background(from left to right)
-#moto-button-9 {
-    .moto-widget-button-link {
-        border: 2px solid;
-        &:after {
-            display: block;
-            opacity: .3;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background-color: @baseColor2_3;
-            content: "";
-            z-index: -1;
-            transition: all .3s;
-        }
-        &:hover:after {
-            width: 100%;
-            opacity: 1;
-        }
-        &.moto-size-large  { padding: 25px 22px; }
-        &.moto-size-medium { padding: 23px 25px 20px; }
-        &.moto-size-small  { padding: 18px 18px; }
-    }    
-}
+// // 3.09. Button with animated layer background(from left to right)
+// #moto-button-9 {
+//     .moto-widget-button-link {
+//         border: 2px solid;
+//         &:after {
+//             display: block;
+//             opacity: .3;
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             width: 0;
+//             height: 100%;
+//             background-color: @baseColor2_3;
+//             content: "";
+//             z-index: -1;
+//             transition: all .3s;
+//         }
+//         &:hover:after {
+//             width: 100%;
+//             opacity: 1;
+//         }
+//         &.moto-size-large  { padding: 25px 22px; }
+//         &.moto-size-medium { padding: 23px 25px 20px; }
+//         &.moto-size-small  { padding: 18px 18px; }
+//     }    
+// }
 
 
-// 3.10. Button with animated layer background(from bottom to up)
-#moto-button-10 {
-    .moto-widget-button-link {
-        padding: 13px 40px;
-        z-index: 0;
-        &:before {
-            bottom: 0;
-            left: 0;
-            height: 0;
-            content: "";
-            position: absolute;
-            width: 100%;
-            display: block;
-            background-color: @baseColor1_3;
-            z-index: -1;
-            transition: all .3s;
-        }
-        &:hover:before { height: 100%; }
-    }    
-}
+// // 3.10. Button with animated layer background(from bottom to up)
+// #moto-button-10 {
+//     .moto-widget-button-link {
+//         padding: 13px 40px;
+//         z-index: 0;
+//         &:before {
+//             bottom: 0;
+//             left: 0;
+//             height: 0;
+//             content: "";
+//             position: absolute;
+//             width: 100%;
+//             display: block;
+//             background-color: @baseColor1_3;
+//             z-index: -1;
+//             transition: all .3s;
+//         }
+//         &:hover:before { height: 100%; }
+//     }    
+// }
 
 
-// 3.11. Button with animated layer background(to center)
-#moto-button-11 {
-    .moto-widget-button-link {
-        border: 2px solid;
-        overflow: hidden;
-        border-radius: 5px;
-        &:before,
-        &:after {
-            position: absolute;
-            top: 0;
-            width: 0;
-            height: 100%;
-            content: "";
-            z-index: -1;
-            background-color: @baseColor4_3;
-            transition: all .5s;
-        }
-        &:before    { left: 0; }
-        &:after     { right: 0; }
+// // 3.11. Button with animated layer background(to center)
+// #moto-button-11 {
+//     .moto-widget-button-link {
+//         border: 2px solid;
+//         overflow: hidden;
+//         border-radius: 5px;
+//         &:before,
+//         &:after {
+//             position: absolute;
+//             top: 0;
+//             width: 0;
+//             height: 100%;
+//             content: "";
+//             z-index: -1;
+//             background-color: @baseColor4_3;
+//             transition: all .5s;
+//         }
+//         &:before    { left: 0; }
+//         &:after     { right: 0; }
 
-        &:hover:before,
-        &:hover:after { width: 50%; }
-        &.moto-size-large {
-            padding: 33px 40px;
-            font-size: 22px;
-        }
-        &.moto-size-medium {
-            padding: 15px 37px;
-            @media screen and (max-width: @const_media_tablet_max_width) {
-                padding: 15px 29px;
-                font-size: 14px;
-            }
-        }
-        &.moto-size-small {
-            padding: 12px 30px
-        }
-    }    
-}
-
-
-// 3.12. Round button. Show text on hover
-#moto-button-12 {
-    .moto-widget-button-link {
-        .moto-widget-button-label {
-            opacity: 0;
-            transition: all .3s;
-        }
-        .moto-widget-theme-icon {
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            top: -2px;
-            width: 22px;
-            height: 22px;
-            line-height: 22px;
-            margin-right: 3px;
-            border-radius: 50%;
-            &:before {
-                position: absolute;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border-radius: inherit;
-                content: "\f105";
-                transition: all .3s;
-            }
-        }
-        &:hover .moto-widget-button-label { opacity: 1; }
-    }    
-}
+//         &:hover:before,
+//         &:hover:after { width: 50%; }
+//         &.moto-size-large {
+//             padding: 33px 40px;
+//             font-size: 22px;
+//         }
+//         &.moto-size-medium {
+//             padding: 15px 37px;
+//             @media screen and (max-width: @const_media_tablet_max_width) {
+//                 padding: 15px 29px;
+//                 font-size: 14px;
+//             }
+//         }
+//         &.moto-size-small {
+//             padding: 12px 30px
+//         }
+//     }    
+// }
 
 
-// 3.13. Button with beautiful hover. Icon comes from top
-#moto-button-13 {
-    .moto-widget-button-link {
-        position: relative;
-        padding: 10px 47px;
-        letter-spacing: 0.06em;
-        border-radius: 24px;
-        border: 2px solid;
-        min-width: 212px;
-        height: 50px;
-        overflow: hidden;
-        .moto-widget-button-label {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 50%;
-            transition: all .3s;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-        }
-        .moto-widget-theme-icon {
-            display: block;
-            position: absolute;
-            top: -100%;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            height: 100%;
-            line-height: 44px;
-            font-size: 30px;
-            transition: all .3s;
-            &:before {
-                content: "\f105";
-                transition: all .3s;
-            }
-        }
-        &::before {
-            content: '';
-            position: absolute;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            z-index: -1;
-            background: @baseColor1_3;
-            -webkit-transform: translateY(0) rotate3d(0, 0, 1, -15deg);
-            transform: translateY(0) rotate3d(0, 0, 1, -15deg);
-            transition: .3s;
-        }
-        &:hover {
-            .moto-widget-theme-icon {
-                top: 50%;
-                -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
-            }
-            .moto-widget-button-label {
-                -webkit-transform: translateY(100%);
-                transform: translateY(100%);
-            }
-            &::before {
-                -webkit-transform: translateY(100%) rotate3d(0, 0, 1, 0deg);
-                transform: translateY(100%) rotate3d(0, 0, 1, 0deg);
-            }
-        }
-        &.moto-size-large { min-width: 220px; }
-        &.moto-size-small { min-width: 150px; }
-    }    
-}
+// // 3.12. Round button. Show text on hover
+// #moto-button-12 {
+//     .moto-widget-button-link {
+//         .moto-widget-button-label {
+//             opacity: 0;
+//             transition: all .3s;
+//         }
+//         .moto-widget-theme-icon {
+//             position: relative;
+//             display: inline-block;
+//             vertical-align: middle;
+//             top: -2px;
+//             width: 22px;
+//             height: 22px;
+//             line-height: 22px;
+//             margin-right: 3px;
+//             border-radius: 50%;
+//             &:before {
+//                 position: absolute;
+//                 left: 0;
+//                 width: 100%;
+//                 height: 100%;
+//                 border-radius: inherit;
+//                 content: "\f105";
+//                 transition: all .3s;
+//             }
+//         }
+//         &:hover .moto-widget-button-label { opacity: 1; }
+//     }    
+// }
 
 
-// 3.14. Buttons with cart icon. Icon Rotated on hover
-#moto-button-14 {
-   .moto-widget-button-link {
-        padding: 12px 15px 14px;
-        border-radius: 23px;
-        .moto-widget-button-label {
-            float: right;
-            padding-top: 2px;
-        }
-        .moto-widget-theme-icon {
-            position: relative;
-            display: inline-block;
-            -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-            transition: all .3s;
-            &:before {
-                content: "\f07a";
-                margin-right: 4px;
-                transition: all .3s;
-            }
-        }
-        &.moto-size-medium {
-            .moto-widget-theme-icon { font-size: 20px; }
-        }
-        &:hover .moto-widget-theme-icon {
-            -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-        }
-    } 
-}
+// // 3.13. Button with beautiful hover. Icon comes from top
+// #moto-button-13 {
+//     .moto-widget-button-link {
+//         position: relative;
+//         padding: 10px 47px;
+//         letter-spacing: 0.06em;
+//         border-radius: 24px;
+//         border: 2px solid;
+//         min-width: 212px;
+//         height: 50px;
+//         overflow: hidden;
+//         .moto-widget-button-label {
+//             position: absolute;
+//             left: 0;
+//             right: 0;
+//             top: 50%;
+//             transition: all .3s;
+//             -webkit-transform: translateY(-50%);
+//             transform: translateY(-50%);
+//         }
+//         .moto-widget-theme-icon {
+//             display: block;
+//             position: absolute;
+//             top: -100%;
+//             left: 0;
+//             right: 0;
+//             margin: 0 auto;
+//             height: 100%;
+//             line-height: 44px;
+//             font-size: 30px;
+//             transition: all .3s;
+//             &:before {
+//                 content: "\f105";
+//                 transition: all .3s;
+//             }
+//         }
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             left: -50%;
+//             width: 200%;
+//             height: 200%;
+//             top: -50%;
+//             z-index: -1;
+//             background: @baseColor1_3;
+//             -webkit-transform: translateY(0) rotate3d(0, 0, 1, -15deg);
+//             transform: translateY(0) rotate3d(0, 0, 1, -15deg);
+//             transition: .3s;
+//         }
+//         &:hover {
+//             .moto-widget-theme-icon {
+//                 top: 50%;
+//                 -webkit-transform: translateY(-50%);
+//                 transform: translateY(-50%);
+//             }
+//             .moto-widget-button-label {
+//                 -webkit-transform: translateY(100%);
+//                 transform: translateY(100%);
+//             }
+//             &::before {
+//                 -webkit-transform: translateY(100%) rotate3d(0, 0, 1, 0deg);
+//                 transform: translateY(100%) rotate3d(0, 0, 1, 0deg);
+//             }
+//         }
+//         &.moto-size-large { min-width: 220px; }
+//         &.moto-size-small { min-width: 150px; }
+//     }    
+// }
+
+
+// // 3.14. Buttons with cart icon. Icon Rotated on hover
+// #moto-button-14 {
+//    .moto-widget-button-link {
+//         padding: 12px 15px 14px;
+//         border-radius: 23px;
+//         .moto-widget-button-label {
+//             float: right;
+//             padding-top: 2px;
+//         }
+//         .moto-widget-theme-icon {
+//             position: relative;
+//             display: inline-block;
+//             -webkit-transform: rotateY(180deg);
+//             transform: rotateY(180deg);
+//             transition: all .3s;
+//             &:before {
+//                 content: "\f07a";
+//                 margin-right: 4px;
+//                 transition: all .3s;
+//             }
+//         }
+//         &.moto-size-medium {
+//             .moto-widget-theme-icon { font-size: 20px; }
+//         }
+//         &:hover .moto-widget-theme-icon {
+//             -webkit-transform: rotateY(0);
+//             transform: rotateY(0);
+//         }
+//     } 
+// }
 
 
 // $4. Images

@@ -1,0 +1,38 @@
+// 3.11. Button with animated layer background(to center)
+#moto-button-11 {
+.moto-widget-button-link {
+    border: 2px solid;
+    overflow: hidden;
+    border-radius: 5px;
+    &:before,
+    &:after {
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+        content: "";
+        z-index: -1;
+        background-color: @baseColor4_3;
+        transition: all .5s;
+    }
+    &:before    { left: 0; }
+    &:after     { right: 0; }
+
+    &:hover:before,
+    &:hover:after { width: 50%; }
+    &.moto-size-large {
+        padding: 33px 40px;
+        font-size: 22px;
+    }
+    &.moto-size-medium {
+        padding: 15px 37px;
+        @media screen and (max-width: @const_media_tablet_max_width) {
+            padding: 15px 29px;
+            font-size: 14px;
+        }
+    }
+    &.moto-size-small {
+        padding: 12px 30px
+    }
+}    
+}

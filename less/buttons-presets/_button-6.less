@@ -1,0 +1,41 @@
+// 3.06. Round button without text
+#moto-button-6 {
+.moto-widget-button-link {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    font-size: 0;
+    .moto-widget-button-label { float: left; }
+    .moto-widget-theme-icon {
+        position: relative;
+        display: inline-block;
+        &:before {
+            font-size: 25px;
+            line-height: 63px;
+            content: "\f105";
+        }
+    }
+    &:hover {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+    &.moto-size-large {
+        width: 63px;
+        height: 63px;
+        .moto-widget-theme-icon:before { line-height: 63px; }
+    }
+    &.moto-size-medium {
+        width: 43px;
+        height: 43px;
+        .moto-widget-theme-icon:before { line-height: 43px; }
+    }
+    &.moto-size-small {
+        width: 23px;
+        height: 23px;
+        .moto-widget-theme-icon:before {
+            line-height: 23px;
+            font-size: 18px;
+        }
+    }
+}
+}

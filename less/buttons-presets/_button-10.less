@@ -1,0 +1,20 @@
+// 3.10. Button with animated layer background(from bottom to up)
+#moto-button-10 {
+.moto-widget-button-link {
+    padding: 13px 40px;
+    z-index: 0;
+    &:before {
+        bottom: 0;
+        left: 0;
+        height: 0;
+        content: "";
+        position: absolute;
+        width: 100%;
+        display: block;
+        background-color: @baseColor1_3;
+        z-index: -1;
+        transition: all .3s;
+    }
+    &:hover:before { height: 100%; }
+}    
+}

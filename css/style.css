@@ -74,6 +74,10 @@ h5 {
   font-size: 18px;
   font-weight: 700;
 }
+.divider {
+  margin: 20px 0;
+  border: 1px solid #e9e8e8;
+}
 .article-entry pre {
   background: #f8f7f7;
   color: #333;
@@ -128,6 +132,12 @@ h5 {
 .numeric-list li {
   counter-increment: my-counter;
   margin-bottom: 20px;
+}
+.numeric-list.compact {
+  margin-bottom: 5px;
+}
+.numeric-list.compact li {
+  margin-bottom: 5px;
 }
 .tag {
   font-weight: 700;
@@ -191,6 +201,30 @@ iframe #wrapper .result .container .item {
 .tabs .tabs-content.active {
   display: block;
 }
+#back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 9999;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 30px;
+  background: #ff7200;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  text-decoration: none;
+  opacity: 0;
+  transition: all .3s;
+}
+#back-to-top:hover {
+  background: #da6100;
+}
+#back-to-top.show {
+  opacity: 1;
+}
 .sidebar {
   position: relative;
 }
@@ -240,10 +274,14 @@ iframe #wrapper .result .container .item {
 .moto-widget-menu-sublist .moto-widget-menu-link {
   color: #ffffff;
 }
+.moto-widget-menu-list > .moto-widget-menu-item:after {
+  background: #555555;
+}
 .moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link {
   color: #555555;
 }
-.moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link:hover {
+.moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link:hover,
+.moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link.moto-widget-menu-link-active {
   color: #fe514c;
 }
 .moto-widget-image {
@@ -262,6 +300,9 @@ iframe #wrapper .result .container .item {
 .moto-widget-image .moto-widget-image-link:hover:before,
 .moto-widget-image .moto-widget-image-link:hover:after {
   opacity: 1;
+}
+.moto-widget-image .moto-widget-image-picture {
+  margin: 0;
 }
 /* --- general styles for menu presets --- */
 .moto-widget-menu {
@@ -310,6 +351,9 @@ iframe #wrapper .result .container .item {
   height: 30px;
   content: "";
 }
+.moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist:after {
+  display: none;
+}
 .moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist .moto-widget-menu-item {
   display: block;
 }
@@ -317,6 +361,9 @@ iframe #wrapper .result .container .item {
   font-size: 13px;
   padding: 0px 20px;
   transition: all .3s;
+}
+.moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-link .moto-widget-menu-link-arrow {
+  display: none;
 }
 .moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist .moto-widget-menu-sublist {
   left: calc(100% + 3px);
@@ -1004,17 +1051,7 @@ iframe #wrapper .result .container .item {
   opacity: 0;
 }
 #moto-menu-3 .moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link .moto-widget-menu-link-arrow {
-  position: absolute;
-  left: 50%;
-  top: 64%;
-  font: 400 16px/16px "FontAwesome";
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-#moto-menu-3 .moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link .moto-widget-menu-link-arrow:before {
-  content: "\f107";
-  -webkit-transition: .3s;
-  transition: .3s;
+  display: none;
 }
 #moto-menu-3 .moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link.moto-widget-menu-link-active:after {
   opacity: 1;
@@ -1076,7 +1113,8 @@ iframe #wrapper .result .container .item {
 #moto-menu-6 .moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link-level-1 {
   padding: 59px 28px 67px;
   font-size: 14px;
-  line-height: 1.2;
+  position: relative;
+  z-index: 3;
 }
 @media screen and (max-width: 767px) {
   #moto-menu-6 .moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link-level-1 {
@@ -1091,7 +1129,7 @@ iframe #wrapper .result .container .item {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #fe514c;
+  background-color: #555555;
   z-index: -1;
   content: "";
   transition: all .3s ease;
@@ -1788,105 +1826,6 @@ iframe #wrapper .result .container .item {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-/*
-Table Of Contents
-
-$1. Menus
-    - Menu arrow(main menu)
-    - Css triangle for menu
-    1.01. Menu with animated border-top and border-bottom
-    1.02. Menu with animated bg on hover
-    1.03. Menu with border-bottom on hover(border with triangle)
-    1.04. Menu with bordered each item and icon
-    1.05. Menu with simple hover
-    1.06. Menu with animated background(right from left)
-    1.07. Menu with delimeter
-    1.08. Menu with left/right borders and animated border-top
-    1.09. Simple menu with icon at the bottom
-    1.10. Menu with animated icon
-    1.11. Submenu with css triangles
-    1.12. Menu looks like mobile menu at desktop
-$2. Media Queries
-    2.01. Media query for tablet
-    2.02. Media query for mobile
-$3. Buttons
-    3.01. Button with icon(right)
-    3.02. Button with icon(left) and animation on hover(icon cover text)
-    3.03. Button with border-bottom and border radius
-    3.04. Button with border and icon(right)
-    3.05. Button with large border-radius
-    3.06. Round button without text
-    3.07. Button with border-top
-    3.08. Button with scaleble layer background
-    3.09. Button with animated layer background(from left to right)
-    3.10. Button with animated layer background(from bottom to up)
-    3.11. Button with animated layer background(to center)
-    3.12. Round button. Show text on hover
-    3.13. Button with beautiful hover. Icon comes from top
-    3.14. Buttons with cart icon. Icon Rotated on hover
-$4. Images
-    4.01. Image with animation. Block rotated by 45deg and scale at hover
-    4.02. Image animated at hover, roteted by 45deg
-    4.03. Image with animation
-    4.04. Image with animated border
-    4.05. Image with large animated icon-plus
-    4.06. Image with animated icon, background and img(scale from center)
-    4.07. Image with animation. Icon and layer background comes from right
-    4.08. Image with simple animation(scale)
-    4.09. Image with animation(scales img and layer background)
-    4.10. Image with animated icon(border-radius: 50%)
-    4.11. Image with border-radius 50%
-    4.12. Imege with animation. Scalable layer background and icon comes from up to center
-$5. Social Icons
-    5.01. Social icons with scalable background
-    5.02. Social icons with custom backgrounds
-    5.03. Social icons with custom background(circular)
-    5.04. Social icons with custom background, color and border-color
-    5.05. Social icons(large)
-    5.06. Social icons with custom background and animation. Rotating icons
-    5.07. Social icons with border
-    5.08. Social icons circular with animation
-    5.09. Social icons with animation. Icon jump in hover
-$6. Grid Gallery
-    6.01. Gallery with animated background and caption(down from the top)
-    6.02. Gallery with animated background and caption(up from the bottom)
-    6.03. Gallery with animated icon(scale)
-    6.04. Gallery with animated image
-    6.05. Gallery with animated layer-background and icon(scale)
-    6.06. Grid gallery with animation (from left)
-$7. Sliders and Carousel
-    7.01. Slider with circular pagination and simple arrows without background
-$8. Lists
-$9. Contact Forms
-    9.01. Contact form for Mailchimp
-
-*/
-.moto-align-right .moto-widget-menu-list > .moto-widget-menu-item .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-sublist {
-  left: calc(-100% - 2px);
-}
-.moto-widget-menu-link-arrow {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -10px;
-  font-size: 12px;
-  display: block;
-  text-align: center;
-}
-.moto-widget-menu-link-arrow:before {
-  content: "\f0d7";
-}
-.moto-widget-menu-sublist:after {
-  position: absolute;
-  top: 20px;
-  left: -5px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 4px 5px 4px 0;
-  border-color: transparent #cccaca transparent transparent;
-  content: "";
-}
 #moto-button-1 .moto-widget-button-link .moto-widget-button-label {
   float: left;
 }
@@ -2328,6 +2267,105 @@ $9. Contact Forms
 #moto-button-14 .moto-widget-button-link:hover .moto-widget-theme-icon {
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
+}
+/*
+Table Of Contents
+
+$1. Menus
+    - Menu arrow(main menu)
+    - Css triangle for menu
+    1.01. Menu with animated border-top and border-bottom
+    1.02. Menu with animated bg on hover
+    1.03. Menu with border-bottom on hover(border with triangle)
+    1.04. Menu with bordered each item and icon
+    1.05. Menu with simple hover
+    1.06. Menu with animated background(right from left)
+    1.07. Menu with delimeter
+    1.08. Menu with left/right borders and animated border-top
+    1.09. Simple menu with icon at the bottom
+    1.10. Menu with animated icon
+    1.11. Submenu with css triangles
+    1.12. Menu looks like mobile menu at desktop
+$2. Media Queries
+    2.01. Media query for tablet
+    2.02. Media query for mobile
+$3. Buttons
+    3.01. Button with icon(right)
+    3.02. Button with icon(left) and animation on hover(icon cover text)
+    3.03. Button with border-bottom and border radius
+    3.04. Button with border and icon(right)
+    3.05. Button with large border-radius
+    3.06. Round button without text
+    3.07. Button with border-top
+    3.08. Button with scaleble layer background
+    3.09. Button with animated layer background(from left to right)
+    3.10. Button with animated layer background(from bottom to up)
+    3.11. Button with animated layer background(to center)
+    3.12. Round button. Show text on hover
+    3.13. Button with beautiful hover. Icon comes from top
+    3.14. Buttons with cart icon. Icon Rotated on hover
+$4. Images
+    4.01. Image with animation. Block rotated by 45deg and scale at hover
+    4.02. Image animated at hover, roteted by 45deg
+    4.03. Image with animation
+    4.04. Image with animated border
+    4.05. Image with large animated icon-plus
+    4.06. Image with animated icon, background and img(scale from center)
+    4.07. Image with animation. Icon and layer background comes from right
+    4.08. Image with simple animation(scale)
+    4.09. Image with animation(scales img and layer background)
+    4.10. Image with animated icon(border-radius: 50%)
+    4.11. Image with border-radius 50%
+    4.12. Imege with animation. Scalable layer background and icon comes from up to center
+$5. Social Icons
+    5.01. Social icons with scalable background
+    5.02. Social icons with custom backgrounds
+    5.03. Social icons with custom background(circular)
+    5.04. Social icons with custom background, color and border-color
+    5.05. Social icons(large)
+    5.06. Social icons with custom background and animation. Rotating icons
+    5.07. Social icons with border
+    5.08. Social icons circular with animation
+    5.09. Social icons with animation. Icon jump in hover
+$6. Grid Gallery
+    6.01. Gallery with animated background and caption(down from the top)
+    6.02. Gallery with animated background and caption(up from the bottom)
+    6.03. Gallery with animated icon(scale)
+    6.04. Gallery with animated image
+    6.05. Gallery with animated layer-background and icon(scale)
+    6.06. Grid gallery with animation (from left)
+$7. Sliders and Carousel
+    7.01. Slider with circular pagination and simple arrows without background
+$8. Lists
+$9. Contact Forms
+    9.01. Contact form for Mailchimp
+
+*/
+.moto-align-right .moto-widget-menu-list > .moto-widget-menu-item .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-sublist {
+  left: calc(-100% - 2px);
+}
+.moto-widget-menu-link-arrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+.moto-widget-menu-link-arrow:before {
+  content: "\f0d7";
+}
+.moto-widget-menu-sublist:after {
+  position: absolute;
+  top: 20px;
+  left: -5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 5px 4px 0;
+  border-color: transparent #cccaca transparent transparent;
+  content: "";
 }
 #moto-image-7 .moto-widget-image-link {
   overflow: hidden;

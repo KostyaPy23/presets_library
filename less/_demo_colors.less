@@ -13,9 +13,12 @@
 
  .moto-widget-menu-list {
  	> .moto-widget-menu-item {
+ 		&:after { background: @baseColor2_3; }
+ 		
  		> .moto-widget-menu-link {
  			color: @baseColor2_3;
- 			&:hover { color: @baseColor1_3; }
+ 			&:hover,
+ 			&.moto-widget-menu-link-active { color: @baseColor1_3; }
  		}
  	}
  }
@@ -37,4 +40,5 @@
  		&:hover:before,
  		&:hover:after { opacity: 1; }
  	}
+ 	.moto-widget-image-picture { margin: 0; }
  }

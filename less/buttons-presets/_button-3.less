@@ -1,0 +1,18 @@
+// 3.03. Button with border-bottom and border radius
+#moto-button-3 {
+.moto-widget-button-link {
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-radius: 5px;
+    transition: transform .0s, padding .0s, background-color .2s ease, border-color .2s ease;
+    &:active {
+        border-width: 0;
+        margin-bottom: 5px;
+        -webkit-transform: translate(0px, 5px);
+        transform: translate(0px, 5px);
+    }
+    &.moto-size-large   { padding: 14px 30px; }
+    &.moto-size-medium  { padding: 12px 25px; }
+    &.moto-size-small   { padding: 9px 20px; }
+}    
+}

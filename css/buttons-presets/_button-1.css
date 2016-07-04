@@ -1,0 +1,13 @@
+#moto-button-1 .moto-widget-button-link .moto-widget-button-label {
+  float: left;
+}
+#moto-button-1 .moto-widget-button-link .moto-widget-theme-icon {
+  position: relative;
+  display: inline-block;
+}
+#moto-button-1 .moto-widget-button-link .moto-widget-theme-icon:before {
+  content: "\f0da";
+  margin-left: 10px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
