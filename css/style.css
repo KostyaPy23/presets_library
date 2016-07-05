@@ -354,6 +354,27 @@ iframe #wrapper .result .container .item {
   margin-left: 5px;
   margin-right: 5px;
 }
+[id^="moto-social-"] .moto-widget-social-links-link {
+  color: #ffffff;
+  border: 1px solid #fe514c !important;
+}
+#moto-social-1 .moto-widget-social-links-link {
+  color: #555555;
+}
+#moto-social-7 .moto-widget-social-links-link {
+  color: #555555;
+}
+#moto-social-8 .moto-widget-social-links-link {
+  color: #ffffff;
+  background-color: #fe514c;
+  border-color: #fe211b;
+}
+#moto-social-9 .moto-widget-social-links-link {
+  color: #fe514c;
+}
+#moto-social-10 .moto-widget-social-links-link {
+  background-color: #6e6e6e;
+}
 /* --- general styles for menu presets --- */
 .moto-widget-menu {
   /* --- general mobile menu styles --- */
