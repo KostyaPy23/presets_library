@@ -88,17 +88,27 @@
  
  #moto-button-5 {
      .moto-widget-button-link {
-        background: @baseColor1_3;
-        color: @baseColor3_3;
-        &:hover {
-          color: @baseColor2_3;
-        }
+         background: @baseColor1_3;
+         color: @baseColor3_3;
+         &:hover {
+             color: @baseColor2_3;
+         }
+     }
+ }
+ 
+ #moto-button-6 {
+     .moto-widget-button-link {
+         background: @baseColor2_3;
+         color: @baseColor3_3;
      }
  }
 
- #moto-button-6 {
-  .moto-widget-button-link {
-    background: @baseColor2_3;
-    color: @baseColor3_3;
-  }
+ // Social Icons
+  [id^="moto-social-"] {
+     padding-top: 120px;
+     text-align: center;
+     .moto-widget-social-links-item {
+        margin-left: 5px;
+        margin-right: 5px;
+     }
  }

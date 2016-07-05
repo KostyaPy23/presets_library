@@ -346,6 +346,14 @@ iframe #wrapper .result .container .item {
   background: #555555;
   color: #ffffff;
 }
+[id^="moto-social-"] {
+  padding-top: 120px;
+  text-align: center;
+}
+[id^="moto-social-"] .moto-widget-social-links-item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 /* --- general styles for menu presets --- */
 .moto-widget-menu {
   /* --- general mobile menu styles --- */
