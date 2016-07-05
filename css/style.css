@@ -356,7 +356,7 @@ iframe #wrapper .result .container .item {
 }
 [id^="moto-social-"] .moto-widget-social-links-link {
   color: #ffffff;
-  border: 1px solid #fe514c !important;
+  border-color: #fe514c !important;
 }
 #moto-social-1 .moto-widget-social-links-link {
   color: #555555;
