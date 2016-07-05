@@ -1164,382 +1164,161 @@ $9. Contact Forms
 
 
 
-
-
-// 4.07. Image with animation. Icon and layer background comes from right
-#moto-image-7 {
-   .moto-widget-image-link {
-        overflow: hidden;
-        &:before {
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-        }
-        &:after {
-            top: 50%;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            background-color: @customColor2;
-            font-family: FontAwesome;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            transform: translate(0, 0);
-            font-size: 19px;
-            line-height: 58px;
-            content: "\f105";
-            z-index: 2;
-            -webkit-transform: translateY(-50%) translateX(800%);
-            transform: translateY(-50%) translateX(800%);
-        }
-        &:hover {
-            &:before {
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
-            }
-            &:after {
-                -webkit-transform: translateY(-50%) translateX(0);
-                transform: translateY(-50%) translateX(0);
-            }
-        }
-    } 
-}
-
-
-// 4.08. Image with simple animation(scale)
-#moto-image-8 {
-    .moto-widget-image-link {
-        overflow: hidden;
-        &:before {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        &:after {
-            top: 50%;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            font-family: FontAwesome;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            transform: translate(0, 0);
-            font-size: 20px;
-            line-height: 20px;
-            content: "\f065";
-            z-index: 2;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-        }
-        &:hover {
-            .moto-widget-image-picture {
-                -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-            }
-        }
-    }    
-}
-
-
-// 4.09. Image with animation(scales img and layer background)
-#moto-image-9 {
-    .moto-widget-image-link {
-        overflow: hidden;
-        &:before {
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            -webkit-transform: scale(.3);
-            transform: scale(.3);
-        }
-        &:hover {
-            .moto-widget-image-picture {
-                -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-            }
-            &:before {
-                -webkit-transform: scale(.9);
-                transform: scale(.9);
-            }
-        }
-    }
-}
-
-
-// 4.10. Image with animated icon(border-radius: 50%)
-#moto-image-10 {
-    .moto-widget-image-link {
-        overflow: hidden;
-        &:before {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        &:after {
-            top: 50%;
-            left: 0;
-            right: 0;
-            width: 95px;
-            height: 95px;
-            border: 5px solid @baseColor4_3;
-            border-radius: 50%;
-            margin: 0 auto;
-            font-family: FontAwesome;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            transform: translate(0, 0);
-            font-size: 42px;
-            line-height: 90px;
-            content: "\f067";
-            z-index: 2;
-            -webkit-transform: translateY(-50%) scale(0);
-            transform: translateY(-50%) scale(0);
-        }
-        &:hover:after {
-            -webkit-transform: translateY(-50%) scale(1);
-            transform: translateY(-50%) scale(1);
-        }
-    }    
-}
-
-
-// 4.11. Image with border-radius 50%
-#moto-image-11 {
-    .moto-widget-image-link {
-        img {
-            border-radius: 50%;
-            overflow: hidden;
-        }
-        &:before {
-            top: 0;
-            left: 0;
-            border-radius: 50%;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-    }    
-}
-
-
-// 4.12. Imege with animation. Scalable layer background and icon comes from up to center
-#moto-image-12 {
-    .moto-widget-image-link {
-        overflow: hidden;
-        &:before {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-        }
-        &:after {
-            top: 50%;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            font-family: FontAwesome;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            transform: translate(0, 0);
-            font-size: 35px;
-            line-height: 35px;
-            content: "\f00e";
-            z-index: 2;
-            -webkit-transform: translateY(-300px) rotate(-90deg);
-            transform: translateY(-300px) rotate(-90deg);
-        }
-
-        &:hover {
-             &:after {
-                -webkit-transform: translateY(-50%) rotate(0);
-                transform: translateY(-50%) rotate(0);
-            }
-            &:before {
-                -webkit-transform: scaleX(1);
-                transform: scaleX(1);
-            }
-        }
-    }    
-}
-
-
 // $5. Social Icons
 // --------------------------------------------------------------
 
-// 5.01. Social icons with scalable background
-#moto-social-1 {
-    .moto-widget-social-links-link {
-        width: 53px;
-        height: 53px;
-        border-radius: 50%;
-        font-size: 24px;
-        line-height: 53px;
-        &:after {
-            position: absolute;
-            display: block;
-            z-index: 0;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: @baseColor1_3;
-            content: '';
-            will-change: -webkit-transform;
-            will-change: transform;
-            -webkit-transform: scale(0);
-            transform: scale(0);
-            transition: all .35s ease
-        }
-        &:hover {
-            &:after {
-                -webkit-transform: scale(1);
-                transform: scale(1);
-            }
-        }
-    }
-}
+// // 5.01. Social icons with scalable background
+// #moto-social-1 {
+//     .moto-widget-social-links-link {
+//         width: 53px;
+//         height: 53px;
+//         border-radius: 50%;
+//         font-size: 24px;
+//         line-height: 53px;
+//         &:after {
+//             position: absolute;
+//             display: block;
+//             z-index: 0;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             border-radius: 50%;
+//             background-color: @baseColor1_3;
+//             content: '';
+//             will-change: -webkit-transform;
+//             will-change: transform;
+//             -webkit-transform: scale(0);
+//             transform: scale(0);
+//             transition: all .35s ease
+//         }
+//         &:hover {
+//             &:after {
+//                 -webkit-transform: scale(1);
+//                 transform: scale(1);
+//             }
+//         }
+//     }
+// }
 
 
-// 5.02. Social icons with custom backgrounds
-#moto-social-2 {
-   .moto-widget-social-links-link {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        line-height: 42px;
-        &.moto-widget-social-links-link_facebook    { background: #4e71a8; }
-        &.moto-widget-social-links-link_googleplus  { background: #e3411f; }
-        &.moto-widget-social-links-link_twitter     { background: #1cb7eb; }
-        &.moto-widget-social-links-link_pinterest   { background: #ca3737; }
-        &.moto-widget-social-links-link_linkedin    { background: #1686b0; }
-        &.moto-widget-social-links-link_instagram   { background: #3e739d; }
-        &:hover { opacity: .8; }
-    } 
-}
+// // 5.02. Social icons with custom backgrounds
+// #moto-social-2 {
+//    .moto-widget-social-links-link {
+//         width: 40px;
+//         height: 40px;
+//         font-size: 20px;
+//         line-height: 42px;
+//         &.moto-widget-social-links-link_facebook    { background: #4e71a8; }
+//         &.moto-widget-social-links-link_googleplus  { background: #e3411f; }
+//         &.moto-widget-social-links-link_twitter     { background: #1cb7eb; }
+//         &.moto-widget-social-links-link_pinterest   { background: #ca3737; }
+//         &.moto-widget-social-links-link_linkedin    { background: #1686b0; }
+//         &.moto-widget-social-links-link_instagram   { background: #3e739d; }
+//         &:hover { opacity: .8; }
+//     } 
+// }
 
 
-// 5.03. Social icons with custom background(circular)
-#moto-social-3 {
-    .moto-widget-social-links-link {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        line-height: 42px;
-        border-radius: 50%;
-        &.moto-widget-social-links-link_facebook    { background: #4e71a8; }
-        &.moto-widget-social-links-link_googleplus  { background: #e3411f; }
-        &.moto-widget-social-links-link_twitter     { background: #1cb7eb; }
-        &.moto-widget-social-links-link_pinterest   { background: #ca3737; }
-        &.moto-widget-social-links-link_linkedin    { background: #1686b0; }
-        &.moto-widget-social-links-link_instagram   { background: #3e739d; }
-        &:hover { opacity: .8; }
-    }    
-}
+// // 5.03. Social icons with custom background(circular)
+// #moto-social-3 {
+//     .moto-widget-social-links-link {
+//         width: 40px;
+//         height: 40px;
+//         font-size: 20px;
+//         line-height: 42px;
+//         border-radius: 50%;
+//         &.moto-widget-social-links-link_facebook    { background: #4e71a8; }
+//         &.moto-widget-social-links-link_googleplus  { background: #e3411f; }
+//         &.moto-widget-social-links-link_twitter     { background: #1cb7eb; }
+//         &.moto-widget-social-links-link_pinterest   { background: #ca3737; }
+//         &.moto-widget-social-links-link_linkedin    { background: #1686b0; }
+//         &.moto-widget-social-links-link_instagram   { background: #3e739d; }
+//         &:hover { opacity: .8; }
+//     }    
+// }
 
 
-// 5.04. Social icons with custom background, color and border-color
-#moto-social-4 {
-    .moto-widget-social-links-link {
-        width: 39px;
-        height: 33px;
-        border: 1px solid;
-        font-size: 14px;
-        line-height: 33px;
-        &.moto-widget-social-links-link_facebook {
-            background-color: #3a5a9f;
-            border-color: #3a5a9f;
-            &:hover:before { color: #3a5a9f; }
-        }
-        &.moto-widget-social-links-link_googleplus {
-            background-color: #d61119;
-            border-color: #d61119;
-            &:hover:before { color: #d61119; }
-        }
-        &.moto-widget-social-links-link_twitter {
-            background-color: #45b0e3;
-            border-color: #45b0e3;
-            &:hover:before { color: #45b0e3; }
-        }
-        &.moto-widget-social-links-link_pinterest {
-            background-color: #bd2126;
-            border-color: #bd2126;
-            &:hover:before { color: #bd2126; }
-        }
-        &.moto-widget-social-links-link_linkedin {
-            background-color: #1783bc;
-            border-color: #1783bc;
-            &:hover:before { color: #1783bc; }
-        }
-        &.moto-widget-social-links-link_instagram {
-            background-color: #34638a;
-            border-color: #34638a;
-            &:hover:before { color: #34638a; }
-        }
-        &:hover { background-color: @baseColor4_3; }
-    }
-}
+// // 5.04. Social icons with custom background, color and border-color
+// #moto-social-4 {
+//     .moto-widget-social-links-link {
+//         width: 39px;
+//         height: 33px;
+//         border: 1px solid;
+//         font-size: 14px;
+//         line-height: 33px;
+//         &.moto-widget-social-links-link_facebook {
+//             background-color: #3a5a9f;
+//             border-color: #3a5a9f;
+//             &:hover:before { color: #3a5a9f; }
+//         }
+//         &.moto-widget-social-links-link_googleplus {
+//             background-color: #d61119;
+//             border-color: #d61119;
+//             &:hover:before { color: #d61119; }
+//         }
+//         &.moto-widget-social-links-link_twitter {
+//             background-color: #45b0e3;
+//             border-color: #45b0e3;
+//             &:hover:before { color: #45b0e3; }
+//         }
+//         &.moto-widget-social-links-link_pinterest {
+//             background-color: #bd2126;
+//             border-color: #bd2126;
+//             &:hover:before { color: #bd2126; }
+//         }
+//         &.moto-widget-social-links-link_linkedin {
+//             background-color: #1783bc;
+//             border-color: #1783bc;
+//             &:hover:before { color: #1783bc; }
+//         }
+//         &.moto-widget-social-links-link_instagram {
+//             background-color: #34638a;
+//             border-color: #34638a;
+//             &:hover:before { color: #34638a; }
+//         }
+//         &:hover { background-color: @baseColor4_3; }
+//     }
+// }
 
 
-// 5.05. Social icons(large)
-#moto-social-5 {
-    .moto-widget-social-links-link {
-        width: 80px;
-        height: 80px;
-        font-size: 36px;
-        line-height: 80px;
-    }    
-}
+// // 5.05. Social icons(large)
+// #moto-social-5 {
+//     .moto-widget-social-links-link {
+//         width: 80px;
+//         height: 80px;
+//         font-size: 36px;
+//         line-height: 80px;
+//     }    
+// }
 
 
-// 5.06. Social icons with custom background and animation. Rotating icons
-#moto-social-6 {
-    .moto-widget-social-links-link {
-        width: 40px;
-        height: 40px;
-        font-size: 24px;
-        line-height: 40px;
-        &:before {
-            position: absolute;
-            left: 0;
-            right: 0;
-            will-change: -webkit-transform;
-            will-change: transform;
-        }
-        &.moto-widget-social-links-link_facebook    { background: #4e71a8; }
-        &.moto-widget-social-links-link_googleplus  { background: #e3411f; }
-        &.moto-widget-social-links-link_twitter     { background: #1cb7eb; }
-        &.moto-widget-social-links-link_pinterest   { background: #ca3737; }
-        &.moto-widget-social-links-link_linkedin    { background: #1686b0; }
-        &.moto-widget-social-links-link_instagram   { background: #3e739d; }
-        &:hover:before {
-            -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-        }
-    }    
-}
+// // 5.06. Social icons with custom background and animation. Rotating icons
+// #moto-social-6 {
+//     .moto-widget-social-links-link {
+//         width: 40px;
+//         height: 40px;
+//         font-size: 24px;
+//         line-height: 40px;
+//         &:before {
+//             position: absolute;
+//             left: 0;
+//             right: 0;
+//             will-change: -webkit-transform;
+//             will-change: transform;
+//         }
+//         &.moto-widget-social-links-link_facebook    { background: #4e71a8; }
+//         &.moto-widget-social-links-link_googleplus  { background: #e3411f; }
+//         &.moto-widget-social-links-link_twitter     { background: #1cb7eb; }
+//         &.moto-widget-social-links-link_pinterest   { background: #ca3737; }
+//         &.moto-widget-social-links-link_linkedin    { background: #1686b0; }
+//         &.moto-widget-social-links-link_instagram   { background: #3e739d; }
+//         &:hover:before {
+//             -webkit-transform: rotateY(360deg);
+//             transform: rotateY(360deg);
+//         }
+//     }    
+// }
 
 
 // 5.07. Social icons with border

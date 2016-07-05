@@ -1,0 +1,30 @@
+// 5.10. Social icons with animation. Square comes from top
+#moto-social-10 {
+.moto-widget-social-links-link {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    overflow: hidden;
+    &:after {
+        position: absolute;
+        display: block;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: @baseColor1_3;
+        content: '';
+        will-change: -webkit-transform;
+        will-change: transform;
+        -webkit-transform: translateY(-150%) rotate(-45deg);
+        transform: translateY(-150%) rotate(-45deg);
+        transition: all .35s ease
+    }
+    &:hover:after {
+        -webkit-transform: translateY(0) rotate(0deg);
+        transform: translateY(0) rotate(0deg);
+    }
+}    
+}

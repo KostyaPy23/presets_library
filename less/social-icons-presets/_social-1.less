@@ -1,0 +1,33 @@
+// 5.01. Social icons with scalable background
+#moto-social-1 {
+.moto-widget-social-links-link {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 53px;
+    &:after {
+        position: absolute;
+        display: block;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: @baseColor1_3;
+        content: '';
+        will-change: -webkit-transform;
+        will-change: transform;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        transition: all .35s ease
+    }
+    &:hover {
+        &:after {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+}
+}

@@ -1,0 +1,35 @@
+#moto-social-6 .moto-widget-social-links-link {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 40px;
+}
+#moto-social-6 .moto-widget-social-links-link:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  will-change: -webkit-transform;
+  will-change: transform;
+}
+#moto-social-6 .moto-widget-social-links-link.moto-widget-social-links-link_facebook {
+  background: #4e71a8;
+}
+#moto-social-6 .moto-widget-social-links-link.moto-widget-social-links-link_googleplus {
+  background: #e3411f;
+}
+#moto-social-6 .moto-widget-social-links-link.moto-widget-social-links-link_twitter {
+  background: #1cb7eb;
+}
+#moto-social-6 .moto-widget-social-links-link.moto-widget-social-links-link_pinterest {
+  background: #ca3737;
+}
+#moto-social-6 .moto-widget-social-links-link.moto-widget-social-links-link_linkedin {
+  background: #1686b0;
+}
+#moto-social-6 .moto-widget-social-links-link.moto-widget-social-links-link_instagram {
+  background: #3e739d;
+}
+#moto-social-6 .moto-widget-social-links-link:hover:before {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}

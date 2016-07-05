@@ -1,0 +1,12 @@
+#moto-social-8 .moto-widget-social-links-link {
+  border: 3px solid;
+  width: 77px;
+  height: 77px;
+  line-height: 74px;
+  font-size: 25px;
+  border-radius: 50%;
+}
+#moto-social-8 .moto-widget-social-links-link:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}

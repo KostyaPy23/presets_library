@@ -307,6 +307,9 @@ iframe #wrapper .result .container .item {
 .moto-widget-image .moto-widget-image-picture {
   margin: 0;
 }
+[id^="moto-button-"] {
+  padding-top: 115px;
+}
 .moto-widget-button-link {
   color: #555555;
   font-family: 'Maven Pro', sans-serif;
@@ -324,6 +327,24 @@ iframe #wrapper .result .container .item {
 }
 .moto-widget-button-link:hover:before {
   color: #fe514c;
+}
+#moto-button-3 .moto-widget-button-link {
+  background-color: #fe8480;
+  border-color: #fe514c;
+}
+#moto-button-3 .moto-widget-button-link:hover {
+  color: #ffffff;
+}
+#moto-button-5 .moto-widget-button-link {
+  background: #fe514c;
+  color: #ffffff;
+}
+#moto-button-5 .moto-widget-button-link:hover {
+  color: #555555;
+}
+#moto-button-6 .moto-widget-button-link {
+  background: #555555;
+  color: #ffffff;
 }
 /* --- general styles for menu presets --- */
 .moto-widget-menu {
@@ -2288,283 +2309,6 @@ iframe #wrapper .result .container .item {
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
-/*
-Table Of Contents
-
-$1. Menus
-    - Menu arrow(main menu)
-    - Css triangle for menu
-    1.01. Menu with animated border-top and border-bottom
-    1.02. Menu with animated bg on hover
-    1.03. Menu with border-bottom on hover(border with triangle)
-    1.04. Menu with bordered each item and icon
-    1.05. Menu with simple hover
-    1.06. Menu with animated background(right from left)
-    1.07. Menu with delimeter
-    1.08. Menu with left/right borders and animated border-top
-    1.09. Simple menu with icon at the bottom
-    1.10. Menu with animated icon
-    1.11. Submenu with css triangles
-    1.12. Menu looks like mobile menu at desktop
-$2. Media Queries
-    2.01. Media query for tablet
-    2.02. Media query for mobile
-$3. Buttons
-    3.01. Button with icon(right)
-    3.02. Button with icon(left) and animation on hover(icon cover text)
-    3.03. Button with border-bottom and border radius
-    3.04. Button with border and icon(right)
-    3.05. Button with large border-radius
-    3.06. Round button without text
-    3.07. Button with border-top
-    3.08. Button with scaleble layer background
-    3.09. Button with animated layer background(from left to right)
-    3.10. Button with animated layer background(from bottom to up)
-    3.11. Button with animated layer background(to center)
-    3.12. Round button. Show text on hover
-    3.13. Button with beautiful hover. Icon comes from top
-    3.14. Buttons with cart icon. Icon Rotated on hover
-$4. Images
-    4.01. Image with animation. Block rotated by 45deg and scale at hover
-    4.02. Image animated at hover, roteted by 45deg
-    4.03. Image with animation
-    4.04. Image with animated border
-    4.05. Image with large animated icon-plus
-    4.06. Image with animated icon, background and img(scale from center)
-    4.07. Image with animation. Icon and layer background comes from right
-    4.08. Image with simple animation(scale)
-    4.09. Image with animation(scales img and layer background)
-    4.10. Image with animated icon(border-radius: 50%)
-    4.11. Image with border-radius 50%
-    4.12. Imege with animation. Scalable layer background and icon comes from up to center
-$5. Social Icons
-    5.01. Social icons with scalable background
-    5.02. Social icons with custom backgrounds
-    5.03. Social icons with custom background(circular)
-    5.04. Social icons with custom background, color and border-color
-    5.05. Social icons(large)
-    5.06. Social icons with custom background and animation. Rotating icons
-    5.07. Social icons with border
-    5.08. Social icons circular with animation
-    5.09. Social icons with animation. Icon jump in hover
-$6. Grid Gallery
-    6.01. Gallery with animated background and caption(down from the top)
-    6.02. Gallery with animated background and caption(up from the bottom)
-    6.03. Gallery with animated icon(scale)
-    6.04. Gallery with animated image
-    6.05. Gallery with animated layer-background and icon(scale)
-    6.06. Grid gallery with animation (from left)
-$7. Sliders and Carousel
-    7.01. Slider with circular pagination and simple arrows without background
-$8. Lists
-$9. Contact Forms
-    9.01. Contact form for Mailchimp
-
-*/
-.moto-align-right .moto-widget-menu-list > .moto-widget-menu-item .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-sublist {
-  left: calc(-100% - 2px);
-}
-.moto-widget-menu-link-arrow {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -10px;
-  font-size: 12px;
-  display: block;
-  text-align: center;
-}
-.moto-widget-menu-link-arrow:before {
-  content: "\f0d7";
-}
-.moto-widget-menu-sublist:after {
-  position: absolute;
-  top: 20px;
-  left: -5px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 4px 5px 4px 0;
-  border-color: transparent #cccaca transparent transparent;
-  content: "";
-}
-#moto-image-7 .moto-widget-image-link {
-  overflow: hidden;
-}
-#moto-image-7 .moto-widget-image-link:before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-}
-#moto-image-7 .moto-widget-image-link:after {
-  top: 50%;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background-color: #ffffff;
-  font-family: FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  font-size: 19px;
-  line-height: 58px;
-  content: "\f105";
-  z-index: 2;
-  -webkit-transform: translateY(-50%) translateX(800%);
-  transform: translateY(-50%) translateX(800%);
-}
-#moto-image-7 .moto-widget-image-link:hover:before {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-}
-#moto-image-7 .moto-widget-image-link:hover:after {
-  -webkit-transform: translateY(-50%) translateX(0);
-  transform: translateY(-50%) translateX(0);
-}
-#moto-image-8 .moto-widget-image-link {
-  overflow: hidden;
-}
-#moto-image-8 .moto-widget-image-link:before {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-#moto-image-8 .moto-widget-image-link:after {
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  font-family: FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  font-size: 20px;
-  line-height: 20px;
-  content: "\f065";
-  z-index: 2;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-#moto-image-8 .moto-widget-image-link:hover .moto-widget-image-picture {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-#moto-image-9 .moto-widget-image-link {
-  overflow: hidden;
-}
-#moto-image-9 .moto-widget-image-link:before {
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  -webkit-transform: scale(0.3);
-  transform: scale(0.3);
-}
-#moto-image-9 .moto-widget-image-link:hover .moto-widget-image-picture {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-#moto-image-9 .moto-widget-image-link:hover:before {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
-}
-#moto-image-10 .moto-widget-image-link {
-  overflow: hidden;
-}
-#moto-image-10 .moto-widget-image-link:before {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-#moto-image-10 .moto-widget-image-link:after {
-  top: 50%;
-  left: 0;
-  right: 0;
-  width: 95px;
-  height: 95px;
-  border: 5px solid #cccaca;
-  border-radius: 50%;
-  margin: 0 auto;
-  font-family: FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  font-size: 42px;
-  line-height: 90px;
-  content: "\f067";
-  z-index: 2;
-  -webkit-transform: translateY(-50%) scale(0);
-  transform: translateY(-50%) scale(0);
-}
-#moto-image-10 .moto-widget-image-link:hover:after {
-  -webkit-transform: translateY(-50%) scale(1);
-  transform: translateY(-50%) scale(1);
-}
-#moto-image-11 .moto-widget-image-link img {
-  border-radius: 50%;
-  overflow: hidden;
-}
-#moto-image-11 .moto-widget-image-link:before {
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-#moto-image-12 .moto-widget-image-link {
-  overflow: hidden;
-}
-#moto-image-12 .moto-widget-image-link:before {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-}
-#moto-image-12 .moto-widget-image-link:after {
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  font-family: FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  font-size: 35px;
-  line-height: 35px;
-  content: "\f00e";
-  z-index: 2;
-  -webkit-transform: translateY(-300px) rotate(-90deg);
-  transform: translateY(-300px) rotate(-90deg);
-}
-#moto-image-12 .moto-widget-image-link:hover:after {
-  -webkit-transform: translateY(-50%) rotate(0);
-  transform: translateY(-50%) rotate(0);
-}
-#moto-image-12 .moto-widget-image-link:hover:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
 #moto-social-1 .moto-widget-social-links-link {
   width: 53px;
   height: 53px;
@@ -2740,6 +2484,163 @@ $9. Contact Forms
 #moto-social-6 .moto-widget-social-links-link:hover:before {
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
+}
+#moto-social-7 .moto-widget-social-links-link {
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  font-size: 24px;
+  line-height: 40px;
+}
+#moto-social-8 .moto-widget-social-links-link {
+  border: 3px solid;
+  width: 77px;
+  height: 77px;
+  line-height: 74px;
+  font-size: 25px;
+  border-radius: 50%;
+}
+#moto-social-8 .moto-widget-social-links-link:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+#moto-social-9 .moto-widget-social-links-link {
+  width: 36px;
+  height: 36px;
+  line-height: 34px;
+  font-size: 20px;
+  border-radius: 16px;
+  border: 1px solid;
+}
+#moto-social-9 .moto-widget-social-links-link:hover {
+  -webkit-transform: translate(0, -7px);
+  transform: translate(0, -7px);
+}
+#moto-social-10 .moto-widget-social-links-link {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  overflow: hidden;
+}
+#moto-social-10 .moto-widget-social-links-link:after {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fe514c;
+  content: '';
+  will-change: -webkit-transform;
+  will-change: transform;
+  -webkit-transform: translateY(-150%) rotate(-45deg);
+  transform: translateY(-150%) rotate(-45deg);
+  transition: all 0.35s ease;
+}
+#moto-social-10 .moto-widget-social-links-link:hover:after {
+  -webkit-transform: translateY(0) rotate(0deg);
+  transform: translateY(0) rotate(0deg);
+}
+/*
+Table Of Contents
+
+$1. Menus
+    - Menu arrow(main menu)
+    - Css triangle for menu
+    1.01. Menu with animated border-top and border-bottom
+    1.02. Menu with animated bg on hover
+    1.03. Menu with border-bottom on hover(border with triangle)
+    1.04. Menu with bordered each item and icon
+    1.05. Menu with simple hover
+    1.06. Menu with animated background(right from left)
+    1.07. Menu with delimeter
+    1.08. Menu with left/right borders and animated border-top
+    1.09. Simple menu with icon at the bottom
+    1.10. Menu with animated icon
+    1.11. Submenu with css triangles
+    1.12. Menu looks like mobile menu at desktop
+$2. Media Queries
+    2.01. Media query for tablet
+    2.02. Media query for mobile
+$3. Buttons
+    3.01. Button with icon(right)
+    3.02. Button with icon(left) and animation on hover(icon cover text)
+    3.03. Button with border-bottom and border radius
+    3.04. Button with border and icon(right)
+    3.05. Button with large border-radius
+    3.06. Round button without text
+    3.07. Button with border-top
+    3.08. Button with scaleble layer background
+    3.09. Button with animated layer background(from left to right)
+    3.10. Button with animated layer background(from bottom to up)
+    3.11. Button with animated layer background(to center)
+    3.12. Round button. Show text on hover
+    3.13. Button with beautiful hover. Icon comes from top
+    3.14. Buttons with cart icon. Icon Rotated on hover
+$4. Images
+    4.01. Image with animation. Block rotated by 45deg and scale at hover
+    4.02. Image animated at hover, roteted by 45deg
+    4.03. Image with animation
+    4.04. Image with animated border
+    4.05. Image with large animated icon-plus
+    4.06. Image with animated icon, background and img(scale from center)
+    4.07. Image with animation. Icon and layer background comes from right
+    4.08. Image with simple animation(scale)
+    4.09. Image with animation(scales img and layer background)
+    4.10. Image with animated icon(border-radius: 50%)
+    4.11. Image with border-radius 50%
+    4.12. Imege with animation. Scalable layer background and icon comes from up to center
+$5. Social Icons
+    5.01. Social icons with scalable background
+    5.02. Social icons with custom backgrounds
+    5.03. Social icons with custom background(circular)
+    5.04. Social icons with custom background, color and border-color
+    5.05. Social icons(large)
+    5.06. Social icons with custom background and animation. Rotating icons
+    5.07. Social icons with border
+    5.08. Social icons circular with animation
+    5.09. Social icons with animation. Icon jump in hover
+$6. Grid Gallery
+    6.01. Gallery with animated background and caption(down from the top)
+    6.02. Gallery with animated background and caption(up from the bottom)
+    6.03. Gallery with animated icon(scale)
+    6.04. Gallery with animated image
+    6.05. Gallery with animated layer-background and icon(scale)
+    6.06. Grid gallery with animation (from left)
+$7. Sliders and Carousel
+    7.01. Slider with circular pagination and simple arrows without background
+$8. Lists
+$9. Contact Forms
+    9.01. Contact form for Mailchimp
+
+*/
+.moto-align-right .moto-widget-menu-list > .moto-widget-menu-item .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-sublist {
+  left: calc(-100% - 2px);
+}
+.moto-widget-menu-link-arrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+.moto-widget-menu-link-arrow:before {
+  content: "\f0d7";
+}
+.moto-widget-menu-sublist:after {
+  position: absolute;
+  top: 20px;
+  left: -5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 5px 4px 0;
+  border-color: transparent #cccaca transparent transparent;
+  content: "";
 }
 #moto-social-7 .moto-widget-social-links-link {
   width: 40px;

@@ -1,62 +1,104 @@
  // Menus
  .moto-widget-menu {
- 	text-align: center;
- 	padding-top: 120px;
+     text-align: center;
+     padding-top: 120px;
  }
-
- .moto-widget-menu-toggle-btn { background: @baseColor1_3; }
-
+ 
+ .moto-widget-menu-toggle-btn {
+     background: @baseColor1_3;
+ }
+ 
  .moto-widget-menu-sublist {
- 	background: @baseColor2_3;
- 	.moto-widget-menu-link { color: @baseColor3_3; }
+     background: @baseColor2_3;
+     .moto-widget-menu-link {
+         color: @baseColor3_3;
+     }
  }
-
+ 
  .moto-widget-menu-list {
- 	> .moto-widget-menu-item {
- 		&:after { background: @baseColor2_3; }
- 		
- 		> .moto-widget-menu-link {
- 			color: @baseColor2_3;
- 			&:hover,
- 			&.moto-widget-menu-link-active { color: @baseColor1_3; }
- 		}
- 	}
+     > .moto-widget-menu-item {
+         &:after {
+             background: @baseColor2_3;
+         }
+         > .moto-widget-menu-link {
+             color: @baseColor2_3;
+             &:hover, &.moto-widget-menu-link-active {
+                 color: @baseColor1_3;
+             }
+         }
+     }
  }
-
-// Images
+ 
+ // Images
  .moto-widget-image {
- 	width: 300px;
- 	height: 300px;
- 	margin: 56px auto 0;
- 	.moto-widget-image-link {
- 		&:before {
- 			opacity: 0;
- 			background: fade(@customColor1, 50%);	
- 		}
- 		&:after { 
- 			opacity: 0;
-			color: @baseColor3_1;
- 		}
- 		&:hover:before,
- 		&:hover:after { opacity: 1; }
- 	}
- 	.moto-widget-image-picture { margin: 0; }
+     width: 300px;
+     height: 300px;
+     margin: 56px auto 0;
+     .moto-widget-image-link {
+         &:before {
+             opacity: 0;
+             background: fade(@customColor1, 50%);
+         }
+         &:after {
+             opacity: 0;
+             color: @baseColor3_1;
+         }
+         &:hover:before, &:hover:after {
+             opacity: 1;
+         }
+     }
+     .moto-widget-image-picture {
+         margin: 0;
+     }
+ }
+ 
+ // Buttons
+ [id^="moto-button-"] {
+     padding-top: 115px;
+ }
+ 
+ .moto-widget-button-link {
+     color: @baseColor2_3;
+     font-family: 'Maven Pro', sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     background-color: transparent;
+     border-color: #fe514c;
+     &:before {
+         color: @baseColor1_3;
+         background: transparent;
+     }
+     &:hover {
+         color: @baseColor1_3;
+         &:before {
+             color: @baseColor1_3;
+         }
+     }
+ }
+ 
+ #moto-button-3 {
+     .moto-widget-button-link {
+         background-color: @baseColor1_5;
+         border-color: @baseColor1_3;
+         &:hover {
+             color: @baseColor3_3;
+         }
+     }
+ }
+ 
+ #moto-button-5 {
+     .moto-widget-button-link {
+        background: @baseColor1_3;
+        color: @baseColor3_3;
+        &:hover {
+          color: @baseColor2_3;
+        }
+     }
  }
 
- // Buttons
- .moto-widget-button-link {
- 	color: @baseColor2_3;
- 	font-family: 'Maven Pro', sans-serif;
-  	font-weight: 400;
-  	font-style: normal;
-	background-color: transparent;
-  	border-color: #fe514c;
-  	&:before {
-  		color: @baseColor1_3;
-  		background: transparent;
-  	}
-  	&:hover {
-  		color: @baseColor1_3;
-  		&:before { color: @baseColor1_3; }
-  	}
+ #moto-button-6 {
+  .moto-widget-button-link {
+    background: @baseColor2_3;
+    color: @baseColor3_3;
+  }
  }
