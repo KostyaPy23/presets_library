@@ -9,6 +9,8 @@ $(document).ready(function() {
 	// Init onScroll function that make curennt menu item active depending from position on the page
 	$(document).on("scroll", onScroll);
 
+	$('#itemTmpl').tmpl(imagesItems).appendTo('#item-template-view');
+
 	staticContent.find('h2.article-title').each(function() {
 		sidebarMenu.append('<li id="' + $(this).attr('id') + '_menu"><a href="#' + $(this).attr('id') + '">' + $(this).html() + '</li>');
 		title = sidebarMenu.find('#' + $(this).attr('id'));
@@ -69,7 +71,7 @@ function onScroll(event){
             $('.sidebar-nav_menu li a').removeClass("active");
             currLink.addClass("active");
         }
-        else{
+        else {
             currLink.removeClass("active");
         }
     });
