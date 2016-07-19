@@ -9,13 +9,21 @@ $(document).ready(function() {
 	// Init onScroll function that make curennt menu item active depending from position on the page
 	$(document).on("scroll", onScroll);
 
-	$('#itemTmpl').tmpl(imagesItems).appendTo('#item-template-view');
+	// Run template
+	if($('#itemTmpl').length) {
+		$('#itemTmpl').tmpl(imagesItems).appendTo('#item-template-view');
+	}
 
+	// var codeBlock = $('.tabs-content.script').html();
+	// var desired = codeBlock.replace(/[^\w\s]/gi, '');
+
+	// Find h2 title at the content and create main items for sidebar menu
 	staticContent.find('h2.article-title').each(function() {
 		sidebarMenu.append('<li id="' + $(this).attr('id') + '_menu"><a href="#' + $(this).attr('id') + '">' + $(this).html() + '</li>');
 		title = sidebarMenu.find('#' + $(this).attr('id'));
 
 	});
+	// Find h3 title at the content and create sub items for sidebar menu
 	staticContent.find('h3').each(function() {
 		prevTitle = sidebarMenu.find('#' + $(this).prevAll('h2').first().attr('id') + '_menu');
 		prevTitle.not(":has(ul)").append('<ul class="sub-menu"></ul>');
@@ -59,7 +67,12 @@ $(document).ready(function() {
 	        }, 700);
 	    });
 	}
+});
 
+$(window).load(function(){
+	if($('#itemTmpl').length) {
+		$('#itemTmpl').tmpl(imagesItems).appendTo('#item-template-view');
+	}
 });
 
 function onScroll(event){
