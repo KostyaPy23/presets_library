@@ -1,0 +1,16 @@
+{
+  "images": [
+    {
+      "title": "Title 1",
+      "presetId": "moto-image-1"
+    },
+    {
+      "title": "Title 2",
+      "presetId": "moto-image-2"
+    },
+    {
+      "title": "Title 3",
+      "presetId": "moto-image-3"
+    }
+  ]
+}
