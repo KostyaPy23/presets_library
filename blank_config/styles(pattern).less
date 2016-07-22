@@ -177,7 +177,8 @@
                         border: none;
                         border-radius: 0;
                         .moto-widget-menu-link-arrow,
-                        &:after { display: none; }
+                        &:after,
+                        &:before { display: none; }
                     }
                     .moto-widget-menu-sublist {
                         width: 100%;
@@ -312,10 +313,7 @@
         .caption {
             z-index: 2;
             transition: all .5s;
-            p {
-                display: inline-block;
-                text-decoration: inherit;
-            }
+            p { text-decoration: inherit; }
         }
         &:before,
         &:after {
