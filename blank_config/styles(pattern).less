@@ -1,28 +1,26 @@
 /* $1. Lists */
 /* ------------------------------ */
+
 .moto-widget-text {
+    a { transition: .3s; }
     ul {
         li {
             position: relative;
             padding: 0 0 0 27px;
-            margin-bottom: 7px;
-            a { transition: all .3s; }
+            &:not(:last-child) { margin-bottom: 7px; }
             &:before {
-                display: block;
                 position: absolute;
                 top: 50%;
                 left: 0;
-                font-size: 14px;
-                font-family: FontAwesome;
+                display: block;
+                font: 700 14px/1.2 FontAwesome;
+                color: @baseColor1_3;
+
                 text-rendering: auto;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
-                transform: translate(0, 0);
-                font-weight: 700;
-                color: @baseColor1_3;
                 content: "\f00c";
-                -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
+                .transform(0, -50%);
             }
         }
     }
@@ -31,22 +29,21 @@
         li {
             position: relative;
             padding-left: 30px;
-            transition: all .3s;
-            &:first-child { margin-top: 0; }
             &:before {
-                content: counter(moto-counter) ".";
-                counter-increment: moto-counter;
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                color: @baseColor1_3;
                 position: absolute;
-                z-index: 0;
                 top: 0;
                 left: 0;
-                text-align: center;
+                z-index: 0;
+                width: 20px;
+                height: 20px;
                 font-size: 14px;
                 line-height: 20px;
+                text-align: center;
+                color: @baseColor1_3;
+                border-radius: 50%;
+
+                content: counter(moto-counter) ".";
+                counter-increment: moto-counter;
             }
         }
     }
@@ -68,54 +65,46 @@
     }
     .moto-widget-menu-list {
         display: inline-block;
-        @media screen and (max-width: @const_media_mobile-h_max_width) {
-            display: none;
-        }
+        @media screen and (max-width: @const_media_mobile-h_max_width) { display: none; }
         > .moto-widget-menu-item {
-            text-align: left;
             > .moto-widget-menu-link {
                 display: block;
                 text-align: center;
-                transition: all .3s;
+                transition: .3s;
+                z-index: 1;
             }
         }
 
         .moto-widget-menu-sublist {
-            top: calc(~"100% + 30px");
+            top: calc(~"100% + 10px");
             min-width: 165px;
             padding: 20px 0;
             left: 0;
             &:before {
                 position: absolute;
-                top: -30px;
+                top: -11px;
                 left: 0;
                 width: 100%;
-                height: 30px;
+                height: 11px;
                 content: "";
             }
             .moto-widget-menu-item {
-                display: block;
                 .moto-widget-menu-link {
                     font-size: 13px;
                     padding: 0px 20px;
-                    transition: all .3s;
+                    transition: .3s;
                 }
             }
-            /* --- third level --- */
+            /* --- 3rd Level --- */
             .moto-widget-menu-sublist {
                 left: calc(~"100% + 3px");
                 top: -20px;
-                margin-left: 0;
-                margin-top: 0;
                 &:before {
-                    position: absolute;
                     top: 0;
-                    left: -3px;
-                    width: 3px;
+                    left: -4px;
+                    width: 4px;
                     height: 100%;
-                    content: "";
                 }
-                &:after { display: none; }
             }
         }
     }
@@ -123,12 +112,9 @@
     &.moto-preset-default {
         .moto-widget-menu-list {
             > .moto-widget-menu-item {
-                &:not(:first-child) {
-                    margin-left: 10px;
-                }
+                &:not(:first-child) { margin-left: 10px; }
                 > .moto-widget-menu-link {
-                    font-size: 16px;
-                    z-index: 2;
+                    font-size: 15px;
                     padding: 12px 15px;
                     border: 1px solid;
                 }
@@ -191,11 +177,11 @@
             }
         }
     }
-    /* --- general mobile menu styles --- */
+    /* --- General mobile menu styles --- */
     &.moto-widget-menu-mobile-open {
         @media screen and (max-width: @const_media_mobile-h_max_width) {
             .moto-widget-menu-list {
-                border: 1px solid;
+                border: 2px solid;
                 .moto-widget-menu-item {
                     border-right: none;
                     padding: 0;
@@ -756,4 +742,11 @@
         }
         &:hover { background-color: @baseColor1_1; }
     }
+}
+
+/* $0. Mixins */
+/* ------------------------------ */
+.transform(@X: -50%; @Y: -50%;) {
+    -webkit-transform: translate(@X, @Y);
+    transform: translate(@X, @Y);
 }
