@@ -41,7 +41,7 @@
                 text-align: center;
                 color: @baseColor1_3;
                 border-radius: 50%;
-                
+
                 content: counter(moto-counter) ".";
                 counter-increment: moto-counter;
             }
@@ -67,50 +67,44 @@
         display: inline-block;
         @media screen and (max-width: @const_media_mobile-h_max_width) { display: none; }
         > .moto-widget-menu-item {
-            text-align: left;
             > .moto-widget-menu-link {
                 display: block;
                 text-align: center;
-                transition: all .3s;
+                transition: .3s;
+                z-index: 1;
             }
         }
 
         .moto-widget-menu-sublist {
-            top: calc(~"100% + 30px");
+            top: calc(~"100% + 10px");
             min-width: 165px;
             padding: 20px 0;
             left: 0;
             &:before {
                 position: absolute;
-                top: -30px;
+                top: -11px;
                 left: 0;
                 width: 100%;
-                height: 30px;
+                height: 11px;
                 content: "";
             }
             .moto-widget-menu-item {
-                display: block;
                 .moto-widget-menu-link {
                     font-size: 13px;
                     padding: 0px 20px;
-                    transition: all .3s;
+                    transition: .3s;
                 }
             }
             /* --- 3rd Level --- */
             .moto-widget-menu-sublist {
                 left: calc(~"100% + 3px");
                 top: -20px;
-                margin-left: 0;
-                margin-top: 0;
                 &:before {
-                    position: absolute;
                     top: 0;
-                    left: -3px;
-                    width: 3px;
+                    left: -4px;
+                    width: 4px;
                     height: 100%;
-                    content: "";
                 }
-                &:after { display: none; }
             }
         }
     }
@@ -118,12 +112,9 @@
     &.moto-preset-default {
         .moto-widget-menu-list {
             > .moto-widget-menu-item {
-                &:not(:first-child) {
-                    margin-left: 10px;
-                }
+                &:not(:first-child) { margin-left: 10px; }
                 > .moto-widget-menu-link {
-                    font-size: 16px;
-                    z-index: 2;
+                    font-size: 15px;
                     padding: 12px 15px;
                     border: 1px solid;
                 }
@@ -154,7 +145,7 @@
     &.moto-widget-menu-mobile-open {
         @media screen and (max-width: @const_media_mobile-h_max_width) {
             .moto-widget-menu-list {
-                border: 1px solid;
+                border: 2px solid;
                 .moto-widget-menu-item {
                     border-right: none;
                     padding: 0;
