@@ -239,7 +239,7 @@ iframe #wrapper .result .container .item {
 }
 .sidebar-nav_menu.affix {
   top: 0;
-  width: 360px;
+  width: 262.5px;
 }
 .sidebar-nav_menu li {
   margin-bottom: 10px;
@@ -2360,7 +2360,7 @@ iframe #wrapper .result .container .item {
   will-change: transform;
   -webkit-transform: scale(0);
   transform: scale(0);
-  transition: all 0.35s ease;
+  transition: all .35s ease;
 }
 #moto-social-1 .moto-widget-social-links-link:hover:after {
   -webkit-transform: scale(1);
