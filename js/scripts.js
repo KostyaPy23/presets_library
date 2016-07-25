@@ -16,6 +16,25 @@ $(document).ready(function () {
     //
 
 
+
+        // $('#testLayout').innerHTML = nano("<div>" +
+        //     "Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong>" +
+        //     "<script src='http://gist-it.appspot.com/https://github.com/KostyaPy23/presets_library/blob/master/less/menus-presets/{user.link}'></script>" +
+        //     "</div>", data);
+
+    setTimeout(function(){
+        $('#testLayout').html(
+            nano = nano("<div>" +
+                "Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong>" +
+                "<script src='{user.link}'></script>" +
+                "</div>", data)
+        );
+    }, 3000);
+
+
+
+
+
     // Find h2 title at the content and create main items for sidebar menu
     staticContent.find('h2.article-title').each(function () {
         sidebarMenu.append('<li id="' + $(this).attr('id') + '_menu"><a href="#' + $(this).attr('id') + '">' + $(this).html() + '</li>');
@@ -83,9 +102,9 @@ function onScroll(event) {
     });
 }
 
-window.onload  = function () {
-	document.getElementById('testLayout').innerHTML = nano("<div>" +
-		"Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong>" +
-		"<script src='http://gist-it.appspot.com/https://github.com/KostyaPy23/presets_library/blob/master/less/menus-presets/{user.link}'></script>" +
-		"</div>", data);
-}
+// window.onload  = function () {
+// 	document.getElementById('testLayout').innerHTML = nano("<div>" +
+// 		"Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong>" +
+// 		"<script src='http://gist-it.appspot.com/https://github.com/KostyaPy23/presets_library/blob/master/less/menus-presets/{user.link}'></script>" +
+// 		"</div>", data);
+// }
