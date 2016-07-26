@@ -1,0 +1,51 @@
+// Gallery with animated layer-background and icon(scale)
+#moto-gallery-5 {
+.moto-widget-grid-gallery-item {
+  &:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &:after {
+    left: 50%;
+    top: 50%;
+    font-family: FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    will-change: -webkit-transform;
+    will-change: transform;
+    font-size: 45px;
+    z-index: 3;
+    content: "\f00e";
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+  }
+  .caption {
+    display: block;
+    opacity: 0;
+    &-visible { opacity: 1; }
+  }
+  &:before {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  &:hover {
+    &:after {
+      -webkit-transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(1);
+    }
+    &:before {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    .moto-widget-grid-gallery-image {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+}
+}

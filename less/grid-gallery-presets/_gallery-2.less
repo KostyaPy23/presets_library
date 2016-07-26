@@ -1,0 +1,33 @@
+// Gallery with animated background and caption(up from the bottom)
+#moto-gallery-2 {
+.moto-widget-grid-gallery-item {
+  &:before {
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all .8s;
+  }
+  .caption {
+    opacity: 0;
+    display: table;
+    position: absolute;
+    top: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1;
+    width: 100%;
+    transition: all .8s ease;
+    &-visible {
+      top: 50%;
+      opacity: 1;
+      transition: all .4s;
+    }
+  }
+  &:hover:before {
+    top: 0;
+    transition: all .4s;
+  }
+}
+}

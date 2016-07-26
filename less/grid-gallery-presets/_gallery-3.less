@@ -1,0 +1,49 @@
+// Gallery with animated icon(scale)
+#moto-gallery-3 {
+.moto-widget-grid-gallery-item {
+  text-align: center;
+  &:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &:after {
+    display: block;
+    top: 50%;
+    left: 0;
+    right: 0;
+    font-family: FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    will-change: -webkit-transform;
+    will-change: transform;
+    font-size: 40px;
+    content: '\f00e';
+    z-index: 3;
+    -webkit-transform: translateY(-50%) scale(0);
+    transform: translateY(-50%) scale(0);
+  }
+  .caption {
+    opacity: 0;
+    display: block;
+    bottom: 10%;
+    padding: 10px;
+    line-height: 1;
+    &-visible { opacity: 1; }
+  }
+  &:hover {
+    &:after {
+      -webkit-transform: translateY(-50%) scale(1);
+      transform: translateY(-50%) scale(1);
+    }
+    .moto-widget-grid-gallery-image {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+}
+}
