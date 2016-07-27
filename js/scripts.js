@@ -9,39 +9,7 @@ $(document).ready(function () {
     // Init onScroll function that make curennt menu item active depending from position on the page
     $(document).on("scroll", onScroll);
 
-    $('#testLayout').html(
-        nano = nano("<div>" +
-            "Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong>" +
-            "<iframe class='myiframe' src='less/menus-presets/{user.link}' frameborder='0' width='100%' height='300'></iframe>" +
-            "</div>", data)
-    );
-
-    // Run template
-    // if($('#itemTmpl').length) {
-    // 	$('#itemTmpl').tmpl(imagesItems).appendTo('#item-template-view');
-    // }
-    //
-
-    var iframe = $(".myiframe");
-
-    var lines = iframe.contents().find("pre").html().split('\n');
-    var result = lines.splice(2);
-
-    iframe.contents().find("pre").attr('data-language', 'css');
-    iframe.contents().find("head").append('<link rel="stylesheet" type="text/css" href="../../css/github.css">');
-    iframe.contents().find("body").append('<script src="../../js/rainbow-custom.min.js"></script>');
-
-
-
-
-        // $('#testLayout').innerHTML = nano("<div>" +
-        //     "Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong>" +
-        //     "<script src='http://gist-it.appspot.com/https://github.com/KostyaPy23/presets_library/blob/master/less/menus-presets/{user.link}'></script>" +
-        //     "</div>", data);
-
-
-
-
+    $('#images-tmpl').tmpl(dataItemsImages).appendTo('#images-presets');
 
     // Find h2 title at the content and create main items for sidebar menu
     staticContent.find('h2.article-title').each(function () {
@@ -94,15 +62,6 @@ $(document).ready(function () {
         });
     }
 });
-//
-// $(window).load(function() {
-//     $('#testLayout').html(
-//         nano = nano("<div>" +
-//             "Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong>" +
-//             "<iframe class='myiframe' src='less/menus-presets/{user.link}' frameborder='0' width='100%' height='300'></iframe>" +
-//             "</div>", data)
-//     );
-// });
 
 function onScroll(event) {
     var scrollPos = $(document).scrollTop();
@@ -118,10 +77,3 @@ function onScroll(event) {
         }
     });
 }
-
-// window.write  = function () {
-// 	document.getElementById('testLayout').innerHTML = nano("<div>" +
-// 		"Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong>" +
-//         "<iframe class='myiframe' src='less/menus-presets/_menu-1.less' frameborder='0' width='100%' height='300'></iframe>" +
-// 		"</div>", data);
-// }

@@ -74,6 +74,10 @@ h5 {
   font-size: 18px;
   font-weight: 700;
 }
+iframe {
+  width: 100%;
+  height: 300px;
+}
 .divider {
   margin: 20px 0;
   border: 1px solid #e9e8e8;
@@ -375,9 +379,59 @@ iframe #wrapper .result .container .item {
 #moto-social-10 .moto-widget-social-links-link {
   background-color: #6e6e6e;
 }
+/* $1. Lists */
+/* ------------------------------ */
+.moto-widget-text a {
+  transition: .3s;
+}
+.moto-widget-text ul li {
+  position: relative;
+  padding: 0 0 0 27px;
+}
+.moto-widget-text ul li:not(:last-child) {
+  margin-bottom: 7px;
+}
+.moto-widget-text ul li:before {
+  position: absolute;
+  content: "\f00c";
+  top: 50%;
+  left: 0;
+  display: block;
+  font: 700 14px/1.2 FontAwesome;
+  color: #fe514c;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.moto-widget-text ol {
+  counter-reset: moto-counter;
+}
+.moto-widget-text ol li {
+  position: relative;
+  padding-left: 30px;
+}
+.moto-widget-text ol li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #fe514c;
+  border-radius: 50%;
+  content: counter(moto-counter) ".";
+  counter-increment: moto-counter;
+}
+/* $2. Menu */
+/* ------------------------------ */
 /* --- general styles for menu presets --- */
 .moto-widget-menu {
-  /* --- general mobile menu styles --- */
+  /* --- General mobile menu styles --- */
 }
 .moto-widget-menu .moto-widget-menu-toggle-btn {
   width: 40px;
@@ -390,72 +444,59 @@ iframe #wrapper .result .container .item {
 }
 .moto-widget-menu .moto-widget-menu-list {
   display: inline-block;
-  padding-left: 0;
 }
 @media screen and (max-width: 320px) {
   .moto-widget-menu .moto-widget-menu-list {
     display: none;
   }
 }
-.moto-widget-menu .moto-widget-menu-list > .moto-widget-menu-item {
-  text-align: left;
-}
 .moto-widget-menu .moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link {
   display: block;
-  text-decoration: none;
   text-align: center;
-  cursor: pointer;
-  transition: all .3s;
+  transition: .3s;
+  z-index: 1;
 }
 .moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist {
-  top: calc(100% + 30px);
+  top: calc(100% + 10px);
   min-width: 165px;
   padding: 20px 0;
   left: 0;
-  /* --- third level --- */
+  /* --- 3rd Level --- */
 }
 .moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist:before {
   position: absolute;
-  top: -30px;
+  top: -11px;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 11px;
   content: "";
-}
-.moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist:after {
-  display: none;
-}
-.moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist .moto-widget-menu-item {
-  display: block;
 }
 .moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-link {
   font-size: 13px;
   padding: 0px 20px;
-  transition: all .3s;
-}
-.moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-link .moto-widget-menu-link-arrow {
-  display: none;
+  transition: .3s;
 }
 .moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist .moto-widget-menu-sublist {
   left: calc(100% + 3px);
   top: -20px;
-  margin-left: 0;
-  margin-top: 0;
 }
 .moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist .moto-widget-menu-sublist:before {
-  position: absolute;
   top: 0;
-  left: -3px;
-  width: 3px;
+  left: -4px;
+  width: 4px;
   height: 100%;
-  content: "";
 }
-.moto-widget-menu .moto-widget-menu-list .moto-widget-menu-sublist .moto-widget-menu-sublist:after {
-  display: none;
+.moto-widget-menu.moto-preset-default .moto-widget-menu-list > .moto-widget-menu-item:not(:first-child) {
+  margin-left: 10px;
+}
+.moto-widget-menu.moto-preset-default .moto-widget-menu-list > .moto-widget-menu-item > .moto-widget-menu-link {
+  font-size: 15px;
+  padding: 12px 15px;
+  border: 1px solid;
 }
 @media screen and (max-width: 320px) {
   .moto-widget-menu.moto-widget-menu-mobile-open .moto-widget-menu-list {
-    border: 1px solid;
+    border: 2px solid;
   }
   .moto-widget-menu.moto-widget-menu-mobile-open .moto-widget-menu-list .moto-widget-menu-item {
     border-right: none;
@@ -476,7 +517,8 @@ iframe #wrapper .result .container .item {
     border-radius: 0;
   }
   .moto-widget-menu.moto-widget-menu-mobile-open .moto-widget-menu-list .moto-widget-menu-item .moto-widget-menu-link .moto-widget-menu-link-arrow,
-  .moto-widget-menu.moto-widget-menu-mobile-open .moto-widget-menu-list .moto-widget-menu-item .moto-widget-menu-link:after {
+  .moto-widget-menu.moto-widget-menu-mobile-open .moto-widget-menu-list .moto-widget-menu-item .moto-widget-menu-link:after,
+  .moto-widget-menu.moto-widget-menu-mobile-open .moto-widget-menu-list .moto-widget-menu-item .moto-widget-menu-link:before {
     display: none;
   }
   .moto-widget-menu.moto-widget-menu-mobile-open .moto-widget-menu-list .moto-widget-menu-item .moto-widget-menu-sublist {
@@ -505,6 +547,7 @@ iframe #wrapper .result .container .item {
     margin: 0;
     text-align: left;
   }
+  .moto-widget-menu.moto-widget-menu-mobile-open .moto-widget-menu-list .moto-widget-menu-item .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-link:before,
   .moto-widget-menu.moto-widget-menu-mobile-open .moto-widget-menu-list .moto-widget-menu-item .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-link:after {
     content: none;
   }
@@ -512,18 +555,17 @@ iframe #wrapper .result .container .item {
     margin: 0;
   }
   .moto-widget-menu.moto-widget-menu-mobile-open .moto-widget-menu-list .moto-widget-menu-item .moto-widget-menu-sublist .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-link {
-    padding: 5px 40px 5px 60px;
+    padding: 5px 40px 10px 60px;
   }
 }
+/* $3. Buttons */
+/* ------------------------------ */
 .moto-widget-button {
   /* --- general styles for button presets --- */
 }
 .moto-widget-button .moto-widget-button-link {
-  display: inline-block;
-  vertical-align: middle;
   position: relative;
   text-align: center;
-  cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
   transition: all .3s;
@@ -541,63 +583,8 @@ iframe #wrapper .result .container .item {
 .moto-widget-button .moto-widget-button-link.moto-size-large {
   font-size: 22px;
 }
-.moto-widget-social-links {
-  /* --- general social links styles --- */
-}
-.moto-widget-social-links .moto-widget-social-links-item {
-  margin-bottom: 5px;
-}
-.moto-widget-social-links .moto-widget-social-links-item .moto-widget-social-links-link {
-  position: relative;
-  display: block;
-  text-align: center;
-  font-family: FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: all .5s;
-}
-.moto-widget-social-links .moto-widget-social-links-item .moto-widget-social-links-link:before {
-  position: relative;
-  z-index: 2;
-  transition: all .5s;
-}
-.moto-widget-social-links .moto-widget-social-links-link_facebook:before {
-  content: "\f09a";
-}
-.moto-widget-social-links .moto-widget-social-links-link_googleplus:before {
-  content: "\f0d5";
-}
-.moto-widget-social-links .moto-widget-social-links-link_twitter:before {
-  content: "\f099";
-}
-.moto-widget-social-links .moto-widget-social-links-link_pinterest:before {
-  content: "\f0d2";
-}
-.moto-widget-social-links .moto-widget-social-links-link_linkedin {
-  content: "\f0e1";
-}
-.moto-widget-social-links .moto-widget-social-links-link_instagram:before {
-  content: "\f16d";
-}
-.moto-widget-social-links.moto-preset-default .moto-widget-social-links-item {
-  margin-left: 12px;
-  margin-right: 12px;
-}
-.moto-widget-social-links.moto-preset-2 .moto-widget-social-links-item {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-.moto-widget-social-links.moto-preset-3 .moto-widget-social-links-item {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-.moto-widget-social-links .moto-widget-social-links-item:last-child {
-  margin-right: 0;
-}
-.moto-widget-social-links .moto-widget-social-links-item:first-of-type {
-  margin-left: 0;
-}
+/* $4. Images */
+/* ------------------------------ */
 .moto-widget-image {
   /* --- general styles for images --- */
 }
@@ -617,49 +604,34 @@ iframe #wrapper .result .container .item {
   will-change: transform;
   transition: .5s;
 }
-/* --- default contact form preset --- */
-.moto-widget-contact_form {
-  /* --- general styles for contact form presets --- */
+/* $5. Grid Gallery */
+/* ------------------------------ */
+.moto-widget-grid-gallery {
+  /* --- general grid gallery styles --- */
 }
-.moto-widget-contact_form .moto-widget-contact_form-form {
-  overflow: visible;
-  border: 1px solid;
-}
-.moto-widget-contact_form .moto-widget-contact_form-group {
-  padding-bottom: 20px;
-}
-.moto-widget-contact_form .moto-widget-contact_form-group .moto-widget-contact_form-label {
-  display: none;
-}
-.moto-widget-contact_form .moto-widget-contact_form-group .moto-widget-contact_form-field {
-  font-size: 14px;
-  padding: 11px 18px;
-  line-height: 23px;
-  height: 50px;
-  outline: none;
-  border-radius: 0;
-  border: none;
-  -webkit-appearance: none;
-}
-.moto-widget-contact_form .moto-widget-contact_form-group .moto-widget-contact_form-field.moto-widget-contact_form-textarea {
-  height: 108px;
-}
-.moto-widget-contact_form .moto-widget-contact_form-group .moto-widget-contact_form-field-error,
-.moto-widget-contact_form .moto-widget-contact_form-group .moto-widget-contact_form-required {
-  position: absolute;
-  font-size: 11px;
-  bottom: 4px;
-}
-.moto-widget-contact_form .moto-widget-contact_form-success,
-.moto-widget-contact_form .moto-widget-contact_form-danger {
+.moto-widget-grid-gallery .moto-widget-grid-gallery-item {
   position: relative;
-  font-size: 11px;
-  bottom: 8px;
-}
-/* --- general sliders styles --- */
-.moto-widget-slider {
   overflow: hidden;
 }
+.moto-widget-grid-gallery .moto-widget-grid-gallery-item .caption {
+  z-index: 2;
+  transition: all .5s;
+}
+.moto-widget-grid-gallery .moto-widget-grid-gallery-item .caption p {
+  text-decoration: inherit;
+}
+.moto-widget-grid-gallery .moto-widget-grid-gallery-item:before,
+.moto-widget-grid-gallery .moto-widget-grid-gallery-item:after {
+  position: absolute;
+  content: "";
+  transition: all .5s;
+}
+.moto-widget-grid-gallery .moto-widget-grid-gallery-item .moto-widget-grid-gallery-image {
+  transition: all .5s;
+}
+/* $6. Sliders and Carousel */
+/* ------------------------------ */
+/* --- general sliders styles --- */
 .moto-widget-slider .bx-pager {
   position: absolute;
   text-align: center;
@@ -837,7 +809,7 @@ iframe #wrapper .result .container .item {
   line-height: 24px;
 }
 .moto-widget-slider.moto-preset-2 .bx-controls-direction .bx-prev {
-  left: 20%;
+  left: 10%;
 }
 @media screen and (max-width: 767px) {
   .moto-widget-slider.moto-preset-2 .bx-controls-direction .bx-prev {
@@ -850,7 +822,7 @@ iframe #wrapper .result .container .item {
   }
 }
 .moto-widget-slider.moto-preset-2 .bx-controls-direction .bx-next {
-  right: 20%;
+  right: 10%;
 }
 @media screen and (max-width: 767px) {
   .moto-widget-slider.moto-preset-2 .bx-controls-direction .bx-next {
@@ -868,124 +840,153 @@ iframe #wrapper .result .container .item {
   border-bottom-color: rgba(24, 27, 39, 0.2);
   border-left-color: #181b27;
 }
-.moto-widget-grid-gallery {
-  /* --- general grid gallery styles --- */
+/* $7. Social Icons */
+/* ------------------------------ */
+.moto-widget-social-links {
+  /* --- general social links styles --- */
 }
-.moto-widget-grid-gallery .moto-widget-grid-gallery-item {
+.moto-widget-social-links .moto-widget-social-links-item {
+  margin-bottom: 5px;
+}
+.moto-widget-social-links .moto-widget-social-links-item .moto-widget-social-links-link {
   position: relative;
-  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-family: FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all .5s;
 }
-.moto-widget-grid-gallery .moto-widget-grid-gallery-item .caption {
+.moto-widget-social-links .moto-widget-social-links-item .moto-widget-social-links-link:before {
+  position: relative;
   z-index: 2;
   transition: all .5s;
 }
-.moto-widget-grid-gallery .moto-widget-grid-gallery-item .caption p {
-  display: inline-block;
-  text-decoration: inherit;
+.moto-widget-social-links .moto-widget-social-links-link_facebook:before {
+  content: "\f09a";
 }
-.moto-widget-grid-gallery .moto-widget-grid-gallery-item:before,
-.moto-widget-grid-gallery .moto-widget-grid-gallery-item:after {
+.moto-widget-social-links .moto-widget-social-links-link_googleplus:before {
+  content: "\f0d5";
+}
+.moto-widget-social-links .moto-widget-social-links-link_twitter:before {
+  content: "\f099";
+}
+.moto-widget-social-links .moto-widget-social-links-link_pinterest:before {
+  content: "\f0d2";
+}
+.moto-widget-social-links .moto-widget-social-links-link_linkedin:before {
+  content: "\f0e1";
+}
+.moto-widget-social-links .moto-widget-social-links-link_instagram:before {
+  content: "\f16d";
+}
+.moto-widget-social-links.moto-preset-default .moto-widget-social-links-list {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.moto-widget-social-links.moto-preset-default .moto-widget-social-links-item {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.moto-widget-social-links.moto-preset-2 .moto-widget-social-links-list {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.moto-widget-social-links.moto-preset-2 .moto-widget-social-links-item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.moto-widget-social-links.moto-preset-3 .moto-widget-social-links-list {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.moto-widget-social-links.moto-preset-3 .moto-widget-social-links-item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* $8. Contact Forms */
+/* ------------------------------ */
+/* --- default contact form preset --- */
+.moto-widget-contact_form {
+  /* --- general styles for contact form presets --- */
+}
+.moto-widget-contact_form .moto-widget-contact_form-form {
+  position: relative;
+  overflow: visible;
+  border: 1px solid;
+}
+.moto-widget-contact_form .moto-widget-contact_form-group {
+  padding-bottom: 20px;
+}
+.moto-widget-contact_form .moto-widget-contact_form-group .moto-widget-contact_form-label {
+  display: none;
+}
+.moto-widget-contact_form .moto-widget-contact_form-group .moto-widget-contact_form-field {
+  font-size: 14px;
+  padding: 11px 18px;
+  line-height: 23px;
+  height: 50px;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  -webkit-appearance: none;
+}
+.moto-widget-contact_form .moto-widget-contact_form-group .moto-widget-contact_form-field.moto-widget-contact_form-textarea {
+  height: 108px;
+}
+.moto-widget-contact_form .moto-widget-contact_form-group .moto-widget-contact_form-field-error,
+.moto-widget-contact_form .moto-widget-contact_form-group .moto-widget-contact_form-required {
   position: absolute;
-  content: "";
-  transition: all .5s;
+  font-size: 11px;
+  top: 5px;
+  right: 5px;
 }
-.moto-widget-grid-gallery .moto-widget-grid-gallery-item .moto-widget-grid-gallery-image {
-  transition: all .5s;
+.moto-widget-contact_form .moto-widget-contact_form-success,
+.moto-widget-contact_form .moto-widget-contact_form-danger {
+  position: relative;
+  font-size: 14px;
+  bottom: 8px;
 }
+/* $9. Back To Top */
+/* ------------------------------ */
 .moto-back-to-top-button {
-  right: 20px;
-  bottom: 90px;
-  width: 46px;
-  height: 46px;
+  right: 40px;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
   transition: all .35s;
-}
-@media screen and (max-width: 320px) {
-  .moto-back-to-top-button {
-    bottom: 20px;
-  }
 }
 .moto-back-to-top-button .moto-back-to-top-button-icon {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 2px solid #fe514c;
   font-family: FontAwesome;
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 24px;
+  line-height: 46px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  color: #fe514c;
-  background-color: #ffffff;
+  color: #646464;
+  background-color: #fe514c;
   text-align: center;
   z-index: 5;
   transition: all .35s;
 }
 .moto-back-to-top-button .moto-back-to-top-button-icon:after {
   position: absolute;
-  top: 1px;
   left: 0;
   right: 0;
   content: "\f106";
   z-index: 3;
 }
 .moto-back-to-top-button .moto-back-to-top-button-icon:hover {
-  color: #ffffff;
-  background-color: #fe514c;
+  background-color: #fe211b;
 }
-.moto-widget-text ul li {
-  position: relative;
-  padding: 0 0 0 27px;
-  margin-bottom: 7px;
-}
-.moto-widget-text ul li a {
-  transition: all .3s;
-}
-.moto-widget-text ul li:before {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  font-size: 14px;
-  font-family: FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  font-weight: 700;
-  color: #fe514c;
-  content: "\f00c";
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.moto-widget-text ol {
-  counter-reset: moto-counter;
-}
-.moto-widget-text ol li {
-  position: relative;
-  padding-left: 30px;
-  transition: all .3s;
-}
-.moto-widget-text ol li:first-child {
-  margin-top: 0;
-}
-.moto-widget-text ol li:before {
-  content: counter(moto-counter) ".";
-  counter-increment: moto-counter;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  color: #fe514c;
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  text-align: center;
-  font-size: 14px;
-  line-height: 20px;
-}
+/* $0. Mixins */
+/* ------------------------------ */
 #moto-menu-1 .moto-widget-menu-list > .moto-widget-menu-item {
   position: relative;
 }
@@ -2572,163 +2573,6 @@ iframe #wrapper .result .container .item {
   -webkit-transform: translateY(0) rotate(0deg);
   transform: translateY(0) rotate(0deg);
 }
-/*
-Table Of Contents
-
-$1. Menus
-    - Menu arrow(main menu)
-    - Css triangle for menu
-    1.01. Menu with animated border-top and border-bottom
-    1.02. Menu with animated bg on hover
-    1.03. Menu with border-bottom on hover(border with triangle)
-    1.04. Menu with bordered each item and icon
-    1.05. Menu with simple hover
-    1.06. Menu with animated background(right from left)
-    1.07. Menu with delimeter
-    1.08. Menu with left/right borders and animated border-top
-    1.09. Simple menu with icon at the bottom
-    1.10. Menu with animated icon
-    1.11. Submenu with css triangles
-    1.12. Menu looks like mobile menu at desktop
-$2. Media Queries
-    2.01. Media query for tablet
-    2.02. Media query for mobile
-$3. Buttons
-    3.01. Button with icon(right)
-    3.02. Button with icon(left) and animation on hover(icon cover text)
-    3.03. Button with border-bottom and border radius
-    3.04. Button with border and icon(right)
-    3.05. Button with large border-radius
-    3.06. Round button without text
-    3.07. Button with border-top
-    3.08. Button with scaleble layer background
-    3.09. Button with animated layer background(from left to right)
-    3.10. Button with animated layer background(from bottom to up)
-    3.11. Button with animated layer background(to center)
-    3.12. Round button. Show text on hover
-    3.13. Button with beautiful hover. Icon comes from top
-    3.14. Buttons with cart icon. Icon Rotated on hover
-$4. Images
-    4.01. Image with animation. Block rotated by 45deg and scale at hover
-    4.02. Image animated at hover, roteted by 45deg
-    4.03. Image with animation
-    4.04. Image with animated border
-    4.05. Image with large animated icon-plus
-    4.06. Image with animated icon, background and img(scale from center)
-    4.07. Image with animation. Icon and layer background comes from right
-    4.08. Image with simple animation(scale)
-    4.09. Image with animation(scales img and layer background)
-    4.10. Image with animated icon(border-radius: 50%)
-    4.11. Image with border-radius 50%
-    4.12. Imege with animation. Scalable layer background and icon comes from up to center
-$5. Social Icons
-    5.01. Social icons with scalable background
-    5.02. Social icons with custom backgrounds
-    5.03. Social icons with custom background(circular)
-    5.04. Social icons with custom background, color and border-color
-    5.05. Social icons(large)
-    5.06. Social icons with custom background and animation. Rotating icons
-    5.07. Social icons with border
-    5.08. Social icons circular with animation
-    5.09. Social icons with animation. Icon jump in hover
-$6. Grid Gallery
-    6.01. Gallery with animated background and caption(down from the top)
-    6.02. Gallery with animated background and caption(up from the bottom)
-    6.03. Gallery with animated icon(scale)
-    6.04. Gallery with animated image
-    6.05. Gallery with animated layer-background and icon(scale)
-    6.06. Grid gallery with animation (from left)
-$7. Sliders and Carousel
-    7.01. Slider with circular pagination and simple arrows without background
-$8. Lists
-$9. Contact Forms
-    9.01. Contact form for Mailchimp
-
-*/
-.moto-align-right .moto-widget-menu-list > .moto-widget-menu-item .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-sublist {
-  left: calc(-100% - 2px);
-}
-.moto-widget-menu-link-arrow {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -10px;
-  font-size: 12px;
-  display: block;
-  text-align: center;
-}
-.moto-widget-menu-link-arrow:before {
-  content: "\f0d7";
-}
-.moto-widget-menu-sublist:after {
-  position: absolute;
-  top: 20px;
-  left: -5px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 4px 5px 4px 0;
-  border-color: transparent #cccaca transparent transparent;
-  content: "";
-}
-#moto-social-7 .moto-widget-social-links-link {
-  width: 40px;
-  height: 40px;
-  border: 1px solid;
-  font-size: 24px;
-  line-height: 40px;
-}
-#moto-social-8 .moto-widget-social-links-link {
-  border: 3px solid;
-  width: 77px;
-  height: 77px;
-  line-height: 74px;
-  font-size: 25px;
-  border-radius: 50%;
-}
-#moto-social-8 .moto-widget-social-links-link:hover {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-}
-#moto-social-9 .moto-widget-social-links-link {
-  width: 36px;
-  height: 36px;
-  line-height: 34px;
-  font-size: 20px;
-  border-radius: 16px;
-  border: 1px solid;
-}
-#moto-social-9 .moto-widget-social-links-link:hover {
-  -webkit-transform: translate(0, -7px);
-  transform: translate(0, -7px);
-}
-#moto-social-10 .moto-widget-social-links-link {
-  width: 30px;
-  height: 30px;
-  font-size: 16px;
-  line-height: 30px;
-  overflow: hidden;
-}
-#moto-social-10 .moto-widget-social-links-link:after {
-  position: absolute;
-  display: block;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fe514c;
-  content: '';
-  will-change: -webkit-transform;
-  will-change: transform;
-  -webkit-transform: translateY(-150%) rotate(-45deg);
-  transform: translateY(-150%) rotate(-45deg);
-  transition: all 0.35s ease;
-}
-#moto-social-10 .moto-widget-social-links-link:hover:after {
-  -webkit-transform: translateY(0) rotate(0deg);
-  transform: translateY(0) rotate(0deg);
-}
 #moto-gallery-1 .moto-widget-grid-gallery-item:before {
   top: 0;
   left: 0;
@@ -2936,6 +2780,32 @@ $9. Contact Forms
 #moto-gallery-6 .moto-widget-grid-gallery-item:hover:before {
   left: 0;
   opacity: 1;
+}
+.moto-align-right .moto-widget-menu-list > .moto-widget-menu-item .moto-widget-menu-sublist .moto-widget-menu-item .moto-widget-menu-sublist {
+  left: calc(-100% - 2px);
+}
+.moto-widget-menu-link-arrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+.moto-widget-menu-link-arrow:before {
+  content: "\f0d7";
+}
+.moto-widget-menu-sublist:after {
+  position: absolute;
+  top: 20px;
+  left: -5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 5px 4px 0;
+  border-color: transparent #cccaca transparent transparent;
+  content: "";
 }
 #moto-slider-1.moto-preset-default .bx-pager-item {
   width: 16px;

@@ -1,40 +1,39 @@
-// 4.05. Image with large animated icon-plus
 #moto-image-5 {
-.moto-widget-image-link {
-    &:before {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+    .moto-widget-image-link {
+        &:before {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &:after {
+            opacity: 0;
+            top: 50%;
+            left: 0;
+            right: 0;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+            font-family: FontAwesome;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transform: translate(0, 0);
+            font-size: 150px;
+            line-height: 160px;
+            content: "\f00e";
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            -webkit-transform: translateY(-50%) scale(1.2);
+            transform: translateY(-50%) scale(1.2);
+        }
+        @media screen and (max-width: @const_media_tablet_max_width) {
+            &:after { font-size: 65px; }
+        }
+        &:hover:after {
+            opacity: 1;
+            -webkit-transform: translateY(-50%) scale(1);
+            transform: translateY(-50%) scale(1);
+        }
     }
-    &:after {
-        opacity: 0;
-        top: 50%;
-        left: 0;
-        right: 0;
-        width: 160px;
-        height: 160px;
-        margin: 0 auto;
-        font-family: FontAwesome;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        transform: translate(0, 0);
-        font-size: 150px;
-        line-height: 160px;
-        content: "\f00e";
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        -webkit-transform: translateY(-50%) scale(1.2);
-        transform: translateY(-50%) scale(1.2);
-    }
-    @media screen and (max-width: @const_media_tablet_max_width) {
-        &:after { font-size: 65px; }
-    }
-    &:hover:after {
-        opacity: 1;
-        -webkit-transform: translateY(-50%) scale(1);
-        transform: translateY(-50%) scale(1);
-    }
-}
 }

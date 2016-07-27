@@ -1,50 +1,49 @@
-// 4.04. Image with animated border
 #moto-image-4 {
-.moto-widget-image-link {
-    overflow: hidden;
-    &:before,
-    &:after {
-        opacity: 0;
-        pointer-events: none;
-        color: inherit;
-        z-index: 3;
-        position: absolute;
-        transition: all 0.5s;
-        box-shadow: none;
-    }
-    &:before {
-        top: 0px;
-        left: 0px;
-        right: 100%;
-        bottom: 100%;
-        border-top: 10px solid;
-        border-left: 10px solid;
-        border-color: @customColor2;
-    }
-    &:after {
-        left: 100%;
-        top: 100%;
-        bottom: 0px;
-        right: 0px;
-        border-bottom: 10px solid;
-        border-right: 10px solid;
-        border-color: @customColor2;
-    }
-    &:hover {
-        .moto-widget-image-picture {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    .moto-widget-image-link {
+        overflow: hidden;
+        &:before,
+        &:after {
+            opacity: 0;
+            pointer-events: none;
+            color: inherit;
+            z-index: 3;
+            position: absolute;
+            transition: all 0.5s;
+            box-shadow: none;
         }
         &:before {
-            opacity: 1;
-            bottom: 0px;
-            right: 0px;
-        }
-        &:after {
-            opacity: 1;
             top: 0px;
             left: 0px;
+            right: 100%;
+            bottom: 100%;
+            border-top: 10px solid;
+            border-left: 10px solid;
+            border-color: @customColor2;
+        }
+        &:after {
+            left: 100%;
+            top: 100%;
+            bottom: 0px;
+            right: 0px;
+            border-bottom: 10px solid;
+            border-right: 10px solid;
+            border-color: @customColor2;
+        }
+        &:hover {
+            .moto-widget-image-picture {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            &:before {
+                opacity: 1;
+                bottom: 0px;
+                right: 0px;
+            }
+            &:after {
+                opacity: 1;
+                top: 0px;
+                left: 0px;
+            }
         }
     }
-}    
 }
