@@ -10,6 +10,9 @@ $(document).ready(function () {
     $(document).on("scroll", onScroll);
 
     $('#images-tmpl').tmpl(dataItemsImages).appendTo('#images-presets');
+    $('#menus-tmpl').tmpl(dataItemsMenus).appendTo('#menus-presets');
+
+
 
     // Find h2 title at the content and create main items for sidebar menu
     staticContent.find('h2.article-title').each(function () {

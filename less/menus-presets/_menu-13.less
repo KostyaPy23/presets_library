@@ -1,54 +1,53 @@
-// Menu with animated borders
 #moto-menu-13 {
-.moto-widget-menu-list {
-    > .moto-widget-menu-item {
-        &:not(:first-child) {
-            margin-left: 36px;
-        }
-        > .moto-widget-menu-link {
-            position: relative;
-            font-size: 30px;
-            z-index: 2;
-            padding: 11px 39px;
-            &:before,
-            &:after {
-                position: absolute;
-                content: "";
-                opacity: 0;
-                width: auto;
-                height: auto;
-                z-index: 3;
-                transition: all .4s;
+    .moto-widget-menu-list {
+        > .moto-widget-menu-item {
+            &:not(:first-child) {
+                margin-left: 36px;
             }
-            &:before {
-                border-bottom: 5px solid @baseColor4_3;
-                border-right: 5px solid @baseColor4_3;
-                left: 100%;
-                top: 100%;
-                bottom: 0;
-                right: 0;
-            }
-            &:after {
-                border-top: 5px solid @baseColor4_3;
-                border-left: 5px solid @baseColor4_3;
-                top: 0;
-                left: 0;
-                right: 100%;
-                bottom: 100%;
-            }
-            &:hover {
+            > .moto-widget-menu-link {
+                position: relative;
+                font-size: 30px;
+                z-index: 2;
+                padding: 11px 39px;
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: "";
+                    opacity: 0;
+                    width: auto;
+                    height: auto;
+                    z-index: 3;
+                    transition: all .4s;
+                }
                 &:before {
-                    left: 0;
-                    top: 0;
-                    opacity: 1;
+                    border-bottom: 5px solid @baseColor4_3;
+                    border-right: 5px solid @baseColor4_3;
+                    left: 100%;
+                    top: 100%;
+                    bottom: 0;
+                    right: 0;
                 }
                 &:after {
-                    right: 0;
-                    bottom: 0;
-                    opacity: 1;
+                    border-top: 5px solid @baseColor4_3;
+                    border-left: 5px solid @baseColor4_3;
+                    top: 0;
+                    left: 0;
+                    right: 100%;
+                    bottom: 100%;
+                }
+                &:hover {
+                    &:before {
+                        left: 0;
+                        top: 0;
+                        opacity: 1;
+                    }
+                    &:after {
+                        right: 0;
+                        bottom: 0;
+                        opacity: 1;
+                    }
                 }
             }
         }
     }
-}
 }
