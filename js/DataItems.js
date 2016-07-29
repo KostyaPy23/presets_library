@@ -123,3 +123,16 @@ var dataItemsImages = [
         lessfile: '_image-12.less'
     }
 ];
+
+var dataItemsButtons = [
+    {
+        title: 'Button with icon(right)',
+        id: 'moto-button-1',
+        lessfile: '_button-1.less'
+    },
+    {
+        title: 'Button with icon(left) and animation on hover(icon cover text)',
+        id: 'moto-button-2',
+        lessfile: '_button-2.less'
+    }
+];

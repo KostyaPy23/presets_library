@@ -337,6 +337,9 @@ iframe #wrapper .result .container .item {
 .moto-widget-button-link:hover:before {
   color: #fe514c;
 }
+#moto-button-2 .moto-widget-button-link:hover .moto-widget-button-label {
+  opacity: 0;
+}
 #moto-button-3 .moto-widget-button-link {
   background-color: #fe8480;
   border-color: #fe514c;
@@ -2410,6 +2413,34 @@ iframe #wrapper .result .container .item {
 #moto-button-14 .moto-widget-button-link:hover .moto-widget-theme-icon {
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
+}
+#moto-button-15 .moto-widget-button-link {
+  padding: 10px 39px;
+  border: 2px solid;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.2);
+}
+#moto-button-15 .moto-widget-button-link:before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background-color: #646464;
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  transition: .3s;
+}
+#moto-button-15 .moto-widget-button-link:hover {
+  box-shadow: none;
+}
+#moto-button-15 .moto-widget-button-link:hover:before {
+  height: 500%;
+  opacity: 1;
 }
 #moto-social-1 .moto-widget-social-links-link {
   width: 53px;

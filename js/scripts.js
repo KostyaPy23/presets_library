@@ -18,6 +18,10 @@ $(document).ready(function () {
         $('#menus-tmpl').tmpl(dataItemsMenus).appendTo('#menus-presets');
     }
 
+    if ($('#buttons-tmpl').length) {
+        $('#buttons-tmpl').tmpl(dataItemsButtons).appendTo('#buttons-presets');
+    }
+
 
     // Find h2 title at the content and create main items for sidebar menu
     staticContent.find('h2.article-title').each(function () {
