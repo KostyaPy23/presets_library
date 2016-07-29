@@ -53,6 +53,11 @@ var dataItemsMenus = [
         title: 'Menu with animated borders',
         id: 'moto-menu-13',
         lessfile: '_menu-13.less'
+    },
+    {
+        title: 'Menu with ckew delimetr',
+        id: 'moto-menu-14',
+        lessfile: '_menu-14.less'
     }
 ];
 

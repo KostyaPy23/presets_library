@@ -9,9 +9,14 @@ $(document).ready(function () {
     // Init onScroll function that make curennt menu item active depending from position on the page
     $(document).on("scroll", onScroll);
 
-    $('#images-tmpl').tmpl(dataItemsImages).appendTo('#images-presets');
-    $('#menus-tmpl').tmpl(dataItemsMenus).appendTo('#menus-presets');
 
+    if ($('#images-tmpl').length) {
+        $('#images-tmpl').tmpl(dataItemsImages).appendTo('#images-presets');
+    }
+
+    if ($('#menus-tmpl').length) {
+        $('#menus-tmpl').tmpl(dataItemsMenus).appendTo('#menus-presets');
+    }
 
 
     // Find h2 title at the content and create main items for sidebar menu

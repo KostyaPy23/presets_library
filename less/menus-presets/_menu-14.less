@@ -1,0 +1,24 @@
+#moto-menu-14 {
+    .moto-widget-menu-list {
+        > .moto-widget-menu-item {
+            position: relative;
+            &:not(:first-child) { margin-left: 20px; }
+            &:not(:last-child):after {
+                position: absolute;
+                top: 4px;
+                right: -13px;
+                width: 1px;
+                height: 28px;
+                content: "";
+                z-index: 1;
+                -webkit-transform: skew(-15deg);
+                transform: skew(-15deg);
+            }
+            > .moto-widget-menu-link {
+                z-index: 2;
+                font-size: 14px;
+                padding: 10px 0;
+            }
+        }
+    }
+}
