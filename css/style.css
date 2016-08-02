@@ -316,6 +316,9 @@ iframe #wrapper .result .container .item {
 .moto-widget-image .moto-widget-image-picture {
   margin: 0;
 }
+#moto-image-13 .moto-widget-image-link:before {
+  background: transparent;
+}
 [id^="moto-button-"] {
   padding-top: 115px;
 }
@@ -1972,6 +1975,42 @@ iframe #wrapper .result .container .item {
 #moto-image-12 .moto-widget-image-link:hover:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+#moto-image-13 .moto-widget-image-link {
+  padding: 5px;
+}
+#moto-image-13 .moto-widget-image-link:before,
+#moto-image-13 .moto-widget-image-link:after {
+  opacity: 0;
+  z-index: 3;
+  transition: all .5s ease;
+}
+#moto-image-13 .moto-widget-image-link:before {
+  top: 10px;
+  left: 10px;
+  right: 100%;
+  bottom: 100%;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+}
+#moto-image-13 .moto-widget-image-link:after {
+  left: 100%;
+  top: 100%;
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  display: block;
+}
+#moto-image-13 .moto-widget-image-link:hover:before {
+  opacity: 1;
+  bottom: 0;
+  right: 0;
+}
+#moto-image-13 .moto-widget-image-link:hover:after {
+  opacity: 1;
+  left: 0;
+  top: 0;
 }
 #moto-button-1 .moto-widget-button-link .moto-widget-button-label {
   float: left;

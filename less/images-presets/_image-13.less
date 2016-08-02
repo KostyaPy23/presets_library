@@ -1,0 +1,40 @@
+#moto-image-13 {
+    .moto-widget-image-link {
+        padding: 5px;
+        &:before,
+        &:after {
+            opacity: 0;
+            z-index: 3;
+            transition: all .5s ease;
+        }
+        &:before {
+            top: 10px;
+            left: 10px;
+            right: 100%;
+            bottom: 100%;
+            border-top: 2px solid @customColor1;;
+            border-left: 2px solid @customColor1;;
+        }
+        &:after {
+            left: 100%;
+            top: 100%;
+            bottom: 10px;
+            right: 10px;
+            border-bottom: 2px solid @customColor1;;
+            border-right: 2px solid @customColor1;;
+            display: block;
+        }
+        &:hover {
+            &:before {
+                opacity: 1;
+                bottom: 0;
+                right: 0;
+            }
+            &:after {
+                opacity: 1;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}

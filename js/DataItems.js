@@ -121,6 +121,11 @@ var dataItemsImages = [
         title: 'Imege with animation. Scalable layer background and icon comes from up to center',
         id: 'moto-image-12',
         lessfile: '_image-12.less'
+    },
+    {
+        title: 'Imege with animation. Animated borders',
+        id: 'moto-image-13',
+        lessfile: '_image-13.less'
     }
 ];
 
