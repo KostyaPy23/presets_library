@@ -72,37 +72,64 @@
                 text-align: center;
                 transition: .3s;
                 z-index: 1;
+                .moto-widget-menu-link-arrow {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 9px;
+                    transition: .3s;
+                    font: 400 18px "FontAwesome";
+                    &:before {
+                        content: '\f107';
+                    }
+                }
+                &:hover {
+                    .moto-widget-menu-link-arrow {
+                        -webkit-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                    }
+                }
             }
         }
 
         .moto-widget-menu-sublist {
-            top: calc(~"100% + 10px");
-            min-width: 165px;
-            padding: 20px 0;
-            left: 0;
+            top: calc(~"100% + 18px");
+            min-width: 270px;
+            left: -21px;
+            border: 1px solid;
+            text-align: left;
             &:before {
                 position: absolute;
-                top: -11px;
+                top: -19px;
                 left: 0;
                 width: 100%;
-                height: 11px;
+                height: 19px;
                 content: "";
             }
             .moto-widget-menu-item {
                 .moto-widget-menu-link {
-                    font-size: 13px;
-                    padding: 0px 20px;
                     transition: .3s;
+                }
+                &:not(:last-child) {
+                    .moto-widget-menu-link {
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            height: 1px;
+                        }
+                    }
                 }
             }
             /* --- 3rd Level --- */
             .moto-widget-menu-sublist {
-                left: calc(~"100% + 3px");
-                top: -20px;
+                left: 100%;
+                top: -1px;
                 &:before {
                     top: 0;
-                    left: -4px;
-                    width: 4px;
+                    left: -3px;
+                    width: 3px;
                     height: 100%;
                 }
             }
@@ -183,18 +210,13 @@
             .moto-widget-menu-list {
                 border: 2px solid;
                 .moto-widget-menu-item {
-                    border-right: none;
-                    padding: 0;
-                    border-bottom: 1px solid;
+                    border: none;
                     margin: 0!important;
-                    border-radius: 0;
-                    &:last-child {
-                        border-bottom: none;
-                    }
+                    &:not(:first-child) { border-bottom: 1px solid; }
                     .moto-widget-menu-link {
-                        padding: 5px 20px;
-                        font-size: 17px;
-                        line-height: 1.5;
+                        padding: 10px 20px;
+                        font-size: 18px;
+                        line-height: 1.2;
                         text-align: left;
                         border: none;
                         border-radius: 0;
@@ -206,7 +228,7 @@
                         width: 100%;
                         margin-left: 0;
                         padding: 0;
-                        border-top: none;
+                        border: none;
                         box-shadow: none;
                         border-radius: 0;
                         &:before, 
@@ -244,16 +266,16 @@
 
 /* $3. Buttons */
 /* ------------------------------ */
+
 .moto-widget-button {
-    /* --- general styles for button presets --- */
     .moto-widget-button-link {
         position: relative;
         text-align: center;
         z-index: 1;
         -webkit-backface-visibility: hidden;
-        transition: all .3s;
+        transition: .3s;
         .moto-widget-button-label { position: relative; }
-        /* --- general font sizes --- */
+        /* --- General font sizes --- */
         &.moto-size-small   { font-size: 15px; }
         &.moto-size-medium  { font-size: 18px; }
         &.moto-size-large   { font-size: 22px; }
@@ -279,12 +301,15 @@
         }
     }
     &.moto-preset-5 {
-        
+        .moto-widget-button-link {
+
+        }
     }
 }
 
 /* $4. Images */
 /* ------------------------------ */
+
 .moto-widget-image {
     /* --- general styles for images --- */
     .moto-widget-image-link {
@@ -710,6 +735,7 @@
 
 /* $9. Back To Top */
 /* ------------------------------ */
+
 .moto-back-to-top-button {
     right: 40px;
     bottom: 40px;

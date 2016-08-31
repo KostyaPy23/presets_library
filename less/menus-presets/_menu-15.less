@@ -1,0 +1,55 @@
+#moto-menu-15 {
+    .moto-widget-menu-list {
+        >.moto-widget-menu-item {
+            >.moto-widget-menu-link {
+                font-size: 16px;
+                line-height: 1.2;
+                padding: 44px 22px;
+                letter-spacing: .64px;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    transition: .3s;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 100%;
+                }
+                &:before {
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 0%, rgba(128, 128, 128, 0) 50%, rgba(255, 255, 255, 0) 100%);
+                }
+            }
+            .moto-widget-menu-sublist {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    .transform(-50%, 0);
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 7px 6px 0 6px;
+                    border-color: @baseColor5_5 transparent transparent transparent;
+                }
+                .moto-widget-menu-item {
+                    .moto-widget-menu-sublist {
+                        &:after {content: none;}
+                    }
+                }
+            }
+            &:hover {
+                >.moto-widget-menu-link {
+                    &:before {
+                        bottom: 0;
+                    }
+                    &:after {
+                        bottom: calc(100% - 8px);
+                        background: @baseColor1_3;
+                    }
+                }
+            }
+        }
+    }
+}
