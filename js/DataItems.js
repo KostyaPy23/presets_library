@@ -144,5 +144,18 @@ var dataItemsButtons = [
         title: 'Button with icon(left) and animation on hover(icon cover text)',
         id: 'moto-button-2',
         lessfile: '_button-2.less'
+    },
+
+
+
+
+
+
+
+
+    {
+        title: 'Button with animated triangles',
+        id: 'moto-button-16',
+        lessfile: '_button-16.less'
     }
 ];

@@ -1,0 +1,35 @@
+#moto-button-16 {
+    .moto-widget-button-link {
+        padding: 25px 60px;
+        transition: 0.33s all cubic-bezier(0, 0.93, 0.25, 1.86);
+        &:before,
+        &:after {
+            position: absolute;
+            display: block;
+            top: 0;
+            bottom: 0;
+            left: 30px;
+            right: 30px;
+            content: "";
+            z-index: -1;
+            background-color: @baseColor1_3;
+            transition: 0.33s all cubic-bezier(0, 0.93, 0.25, 1.86);
+        }
+        &:before {
+            -webkit-transform: skew(37deg);
+            transform: skew(37deg);
+        }
+        &:after {
+            -webkit-transform: skew(-37deg);
+            transform: skew(-37deg);
+        }
+        &:hover {
+            padding: 25px 65px;
+            &:before,
+            &:after {
+                left: 25px;
+                right: 25px;
+            }
+        }
+    }
+}
